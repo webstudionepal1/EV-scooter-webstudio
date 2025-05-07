@@ -81,7 +81,7 @@ const HeroSection = () => {
             </h1>
           </div>
           {/* Product Details */}
-          <div className="absolute 2xl:top-120 2xl:left-4 xl:top-85 lg:top-72 top-40 md:top-85 2xl:w-60 xl:w-50 lg:w-40 w-full">
+          <div className="absolute left-0 2xl:bottom-9 -bottom-30 md:-bottom-20 lg:-bottom-4 xl:bottom-3 2xl:w-60 xl:w-50 lg:w-40 w-full">
             <h1 className="font-Poppins 2xl:text-6xl lg:text-4xl text-[30px] font-[700]">
               C45
             </h1>

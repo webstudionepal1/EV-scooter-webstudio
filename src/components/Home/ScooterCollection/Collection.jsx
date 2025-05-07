@@ -21,15 +21,15 @@ const Collection = () => {
         </button>
 
         {/* Image container */}
-        <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 gap-x-4 gap-y-9 self-stretch mt-7 place-items-center">
-          <div className="md:w-[400px] w-[300px] md:h-[600px] h-[500px]">
+        <div className="grid xl:grid-cols-4  lg:grid-cols-2 grid-cols-1 gap-x-4 gap-y-9 self-stretch mt-7 place-items-center">
+          <div className="2xl:w-[400px] xl:w-[300px] md:w-[400px] w-[300px] 2xl:h-[700px] xl:h-[500px]  md:h-[600px] h-[500px]">
             <div className="relative">
               <img
                 src={collection}
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <button className="md:p-4 p-[4px] rounded-full bg-black absolute right-0 bottom-0">
+              <button className="2xl:p-4 xl:p-[5px] md:p-4 p-[4px] rounded-full bg-black absolute right-0 bottom-0">
                 <Icon
                   icon="iconamoon:arrow-top-right-1-light"
                   color="white"
@@ -44,14 +44,14 @@ const Collection = () => {
             </h2>
           </div>
 
-          <div className="md:w-[400px] w-[300px] md:h-[600px] h-[500px]">
+          <div className="2xl:w-[400px] xl:w-[300px] md:w-[400px] w-[300px] 2xl:h-[700px] xl:h-[500px] md:h-[600px] h-[500px]">
             <div className="relative">
               <img
                 src={collection1}
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <button className="md:p-4 p-[4px] rounded-full bg-black absolute right-0 bottom-0">
+              <button className="md:p-4 p-[4px] 2xl:p-4 xl:p-[5px] rounded-full bg-black absolute right-0 bottom-0">
                 <Icon
                   icon="iconamoon:arrow-top-right-1-light"
                   color="white"
@@ -66,14 +66,14 @@ const Collection = () => {
             </h2>
           </div>
 
-          <div className="md:w-[400px] w-[300px] md:h-[600px] h-[500px]">
+          <div className="2xl:w-[400px] xl:w-[300px] md:w-[400px] w-[300px]  2xl:h-[700px] xl:h-[500px] md:h-[600px] h-[500px]">
             <div className="relative">
               <img
                 src={collection2}
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <button className="md:p-4 p-[4px] rounded-full bg-black absolute right-0 bottom-0">
+              <button className="md:p-4 p-[4px] 2xl:p-4 xl:p-[5px] rounded-full bg-black absolute right-0 bottom-0">
                 <Icon
                   icon="iconamoon:arrow-top-right-1-light"
                   color="white"
@@ -88,14 +88,14 @@ const Collection = () => {
             </h2>
           </div>
 
-          <div className="md:w-[400px] w-[300px] md:h-[600px] h-[500px]">
+          <div className="2xl:w-[400px] xl:w-[300px] md:w-[400px] w-[300px]  2xl:h-[700px] xl:h-[500px] md:h-[600px] h-[500px]">
             <div className="relative">
               <img
                 src={collection3}
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <button className="md:p-4 p-[4px] rounded-full bg-black absolute right-0 bottom-0">
+              <button className="md:p-4 p-[4px] 2xl:p-4 xl:p-[5px] rounded-full bg-black absolute right-0 bottom-0">
                 <Icon
                   icon="iconamoon:arrow-top-right-1-light"
                   color="white"
@@ -112,7 +112,7 @@ const Collection = () => {
         </div>
 
         {/* indicator */}
-        <div className="flex justify-center gap-1 self-stretch mt-7">
+        <div className="flex justify-center gap-1 self-stretch ">
           <div className="h-[1px] w-[30%] bg-[#DBDBDB]"></div>
           {/* active */}
           <div className="h-[1px] w-[30%] bg-[#464646] "></div>
