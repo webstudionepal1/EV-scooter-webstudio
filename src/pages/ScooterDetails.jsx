@@ -133,25 +133,26 @@ const ScooterDetails = () => {
         </div>
       </div>
 
-      {/* Variant  */}
+      {/* Variant */}
       <div className="w-full relative top-[430px] py-9 bg-[#F5F5F5]">
-        <h1 className="font-Playfair font-[700] text-[40px] text-center text-[#000]">
+        <h1 className="font-Playfair font-bold text-3xl md:text-4xl text-center text-black">
           Variant
         </h1>
+
         {/* Carousels */}
-        <div className="mt-12 flex h-[776px] items-center">
+        <div className="mt-12 flex flex-col lg:flex-row items-center justify-center gap-4 lg:h-[776px] px-4">
           {/* inactive left */}
           <div
-            className="w-[637.86px] h-[567.95px] max-w-[637.86px] bg-cover bg-center bg-no-repeat opacity-35"
+            className="hidden lg:block w-[40%] max-w-[600px] h-[300px] lg:h-[567.95px] bg-cover bg-center bg-no-repeat opacity-35"
             style={{
-              background: `url(${carousel1}) -200px 0.0001px / 100% 100% no-repeat`,
+              background: `url(${carousel1}) center center / cover no-repeat`,
             }}
           ></div>
 
           {/* active */}
-          <div className="h-full flex-col">
-            <div className="flex items-center justify-center h-full max-w-[797.33px]">
-              <div className="p-2 bg-[#000] rounded-full">
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center h-[300px] md:h-[400px] lg:h-[567.95px] w-full max-w-[797px]">
+              <div className="p-2 bg-black rounded-full cursor-pointer">
                 <Icon
                   icon="icons8:double-left"
                   width="24"
@@ -159,14 +160,14 @@ const ScooterDetails = () => {
                   style={{ color: "#fff" }}
                 />
               </div>
-              <div className="w-[797px] h-full">
+              <div className="w-[80%] h-full mx-4">
                 <img
                   src={carousel2}
                   alt=""
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center rounded-lg"
                 />
               </div>
-              <div className="p-2 bg-[#000] rounded-full">
+              <div className="p-2 bg-black rounded-full cursor-pointer">
                 <Icon
                   icon="icons8:double-right"
                   width="24"
@@ -175,20 +176,21 @@ const ScooterDetails = () => {
                 />
               </div>
             </div>
-            <h1 className="font-Playfair text-center text-[24px] font-[700]">
+            <h1 className="font-Playfair text-center text-lg md:text-xl font-bold mt-4">
               Blue Sky
             </h1>
           </div>
 
-          {/* inactive left */}
+          {/* inactive right */}
           <div
-            className="w-[637.86px] h-[567.95px] max-w-[637.86px] bg-cover bg-center bg-no-repeat opacity-35"
+            className="hidden lg:block w-[40%] max-w-[600px] h-[300px] lg:h-[567.95px] bg-cover bg-center bg-no-repeat opacity-35"
             style={{
-              background: `url(${carousel3}) 200px 0.0001px / 100% 100% no-repeat`,
+              background: `url(${carousel3}) center center / cover no-repeat`,
             }}
           ></div>
         </div>
       </div>
+
       {/* Detail specification */}
       <div className="w-full relative top-[500px] lg:px-5 xl:px-30">
         <h1 className="font-Playfair font-[700] text-[40px] text-center text-[#000] mt-12">
