@@ -3,7 +3,7 @@ import { useState } from "react";
 import SearchAndContact from "./SearchAndContact";
 import { Icon } from "@iconify/react";
 import SearchBar from "./SearchBar";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, } from "react-router-dom";
 
 const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -66,11 +66,10 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
       {/* mobile nav */}
       {showMenu ? (
         <div
-          className={`fixed top-0 h-screen z-80 w-[18rem] bg-gray-300 rounded-r-3xl transition-all duration-500 ease-in-out transform ${
-            showMenu
+          className={`fixed top-0 h-screen z-80 w-[18rem] bg-gray-300 rounded-r-3xl transition-all duration-500 ease-in-out transform ${showMenu
               ? "opacity-100 translate-y-0 pointer-events-auto"
               : "opacity-0 -translate-y-5 pointer-events-none"
-          }`}
+            }`}
         >
           <div className=" flex gap-10 items-center h-[94px]">
             <Icon

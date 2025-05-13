@@ -5,15 +5,15 @@ import ProductItemAndIndicator from "./ProductItemAndIndicator";
 import { AnimatePresence, motion } from "framer-motion";
 
 import hero1 from "@/assets/images/scooter1.png";
-import hero2 from "@/assets/images/scooter2.png";
-import hero3 from "@/assets/images/scooter3.png";
-import hero from "@/assets/images/heroImage.png";
+import hero2 from "@/assets/images/scooter5.png";
+import hero3 from "@/assets/images/scooter9.png";
+
 
 const HeroSection = () => {
   const products = [
-    { name: "Velozip", model: "DB50QT", imageName: hero1 },
-    { name: "SpeedX", model: "RS80", imageName: hero2 },
-    { name: "Zoomster", model: "ZX90", imageName: hero3 },
+    { name: "Velozip", model: "RAZOR", imageName: hero1 },
+    { name: "SpeedX", model: "F1-PRO", imageName: hero2 },
+    { name: "Zoomster", model: "MOPED", imageName: hero3 },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
@@ -36,15 +36,15 @@ const HeroSection = () => {
       <div className="relative w-full h-fit left-0 lg:-top-5 ">
         {/* image */}
         <div className="absolute z-50 left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2 ">
-          <div className="2xl:w-[910.573px] 2xl:h-[688.299px] xl:h-[721px] xl:w-[670.195px] lg:w-[521px] lg:h-[570px] md:h-[410px] md:w-[400px] w-[200px] h-[280px] -rotate-30 ">
+          <div className="2xl:w-[910.573px] 2xl:h-[688.299px] xl:h-[721px] xl:w-[670.195px] lg:w-[521px] lg:h-[570px] md:h-[410px] md:w-[400px] sm:w-[300px] sm:h-[400px] w-[230px] h-[380px] -rotate-30 ">
             <AnimatePresence mode="wait">
               <motion.img
                 key={products[activeIndex].imageName}
                 src={products[activeIndex].imageName}
                 alt={products[activeIndex].name}
-                className="h-full w-full object-contain object-center scale-120"
+                className="h-full w-full object-contain object-center scale-100"
                 initial={{ x: -100, opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1,x:0 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
                 exit={{ x: 100, opacity: 0, scale: 0.95 }}
                 transition={{ duration: 1 }}
               />
@@ -67,16 +67,18 @@ const HeroSection = () => {
               fill="#00C853"
             />
           </svg>
-          <div className="absolute bottom-0 w-[80%] right-0 flex gap-5 items-end py-5">
-            <button className="p-4 rounded-full bg-black h-20 w-20 hidden lg:block ">
-              <Icon
-                icon="iconamoon:arrow-top-right-1-light"
-                color="white"
-                width="50"
-                height="50"
-              />
+          <div className="absolute bottom-0 w-[80%] right-0 flex sm:gap-5 gap-2 items-end py-5">
+            <button className=" sm:p-1  rounded-full bg-black sm:h-10 sm:w-10  h-6 w-6 md:h-12 md:w-12 lg:block ">
+              <div className=" sm:h-8 sm:w-8 md:h-10 md:w-10 h-6 w-6 flex justify-center items-center">
+                <Icon
+                  icon="iconamoon:arrow-top-right-1-light"
+                  color="white"
+                  width={45}
+                  height={45}
+                />
+              </div>
             </button>
-            <h1 className="uppercase 2xl:text-[180px] xl:text-9xl lg:text-8xl md:text-[80px]  font-Playfair text-center opacity-[0.05]">
+            <h1 className="uppercase 2xl:text-[180px] xl:text-9xl lg:text-8xl md:text-[80px] sm:text-6xl text-4xl font-Playfair text-center opacity-[0.05]">
               Electric.
             </h1>
           </div>
@@ -96,7 +98,7 @@ const HeroSection = () => {
           </div>
 
           {/* Slider Product container */}
-          <div className="absolute bottom-10 right-3 hidden lg:block">
+          <div className="absolute bottom-10 right-3 md:block  hidden lg:block">
             <ProductItemAndIndicator
               products={products}
               activeIndex={activeIndex}

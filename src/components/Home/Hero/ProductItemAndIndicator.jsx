@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
-import productImage from "@/assets/images/productItem.png";
+
 
 const ProductItemAndIndicator = ({ products, activeIndex }) => {
   return (
@@ -11,7 +11,7 @@ const ProductItemAndIndicator = ({ products, activeIndex }) => {
           <motion.div
             key={activeIndex}
             initial={{ y: 100, opacity: 0 }}
-            animate={ activeIndex===1?{y: 0, opacity: 1 }:activeIndex>1?{y: -100, opacity: 1}:{y: 100, opacity: 1}}
+            animate={activeIndex === 1 ? { y: 0, opacity: 1 } : activeIndex > 1 ? { y: -100, opacity: 1 } : { y: 100, opacity: 1 }}
             exit={{ y: -100, opacity: 0 }}
             transition={{ duration: 0.5 }}
             className="flex flex-col gap-2 items-center absolute"
@@ -19,13 +19,12 @@ const ProductItemAndIndicator = ({ products, activeIndex }) => {
             {products.map((product, index) => (
               <div
                 key={index}
-                className={`flex gap-2 items-center h-24 w-48 px-3 py-3 rounded-2xl transition-all duration-500 ${
-                  index === activeIndex
-                    ? "bg-white shadow-lg"
-                    : index > activeIndex
+                className={`flex gap-2 items-center h-24 w-48 px-3 py-3 rounded-2xl transition-all duration-500 ${index === activeIndex
+                  ? "bg-white shadow-lg"
+                  : index > activeIndex
                     ? "blur-[2px] bg-gradient-to-t from-[#00C853] to-[#3CDA7E]"
                     : "blur-[2px] bg-gradient-to-b from-[#00C853] to-[#3CDA7E]"
-                }`}
+                  }`}
               >
                 {index === activeIndex && (
                   <>
@@ -55,9 +54,8 @@ const ProductItemAndIndicator = ({ products, activeIndex }) => {
         {products.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-6 rounded-full transition-all duration-300 ${
-              index === activeIndex ? "bg-black h-12" : "bg-white"
-            }`}
+            className={`w-2 h-6 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-black h-12" : "bg-white"
+              }`}
           ></div>
         ))}
       </div>

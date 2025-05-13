@@ -11,8 +11,8 @@ const Testimonials = () => {
     const width = window.innerWidth;
     if (width > 1440) {
       setMaxAvatars(5); // For desktop screens (lg)
-    } 
-    
+    }
+
     else if (width >= 1024) {
       setMaxAvatars(4); // For tablets (md)
     } else {
@@ -35,8 +35,8 @@ const Testimonials = () => {
         slotProps={{
           additionalAvatar: {
             sx: {
-              width: { md: 30, lg: 40, xl: 50 ,sm:20},
-              height: { md: 30, lg: 40, xl: 50 ,sm:20},
+              width: { md: 30, lg: 40, xl: 50, sm: 20 },
+              height: { md: 30, lg: 40, xl: 50, sm: 20 },
             },
           },
         }}
@@ -105,7 +105,7 @@ const Testimonials = () => {
 
             color="#F78C11"
             inline={true}
-            className="inline-block size-3 md:size-6" 
+            className="inline-block size-3 md:size-6"
           />
           <Icon
             icon="material-symbols:star"

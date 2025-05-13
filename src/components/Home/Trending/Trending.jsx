@@ -6,16 +6,16 @@ import security from "@/assets/images/icons/security.svg";
 import speed from "@/assets/images/icons/speed.svg";
 import current from "@/assets/images/icons/current.svg";
 import vector from "@/assets/images/vector/trending_features.png";
-import featuresScooter from "@/assets/images/features_scooter.png";
-import features1 from "@/assets/images/features1.png";
-import features2 from "@/assets/images/features2.png";
-import features3 from "@/assets/images/features3.png";
+import featuresScooter from "@/assets/images/feature_scooter.png";
+import features1 from "@/assets/images/scooter7.png";
+import features2 from "@/assets/images/scooter8.png";
+
 import { AnimatePresence, motion } from "framer-motion";
 
 const Trending = () => {
   const trending = [
     {
-      make: "60cc Urban Glide Scooter",
+      make: "2000w Razor",
       model: "UG60X-21",
       imageName: featuresScooter,
       features: [
@@ -29,7 +29,7 @@ const Trending = () => {
       ],
     },
     {
-      make: "60cc Urban Glide Scooter",
+      make: "2000w F1-PRO",
       model: "DB50QT - 11",
       imageName: features1,
       features: [
@@ -43,7 +43,7 @@ const Trending = () => {
       ],
     },
     {
-      make: "60cc Urban Glide Scooter",
+      make: "2000w Moped",
       model: "DB50QT - 11",
       imageName: features2,
       features: [
@@ -56,20 +56,7 @@ const Trending = () => {
         { content: "Anti-theft smart lock system", icon: security },
       ],
     },
-    {
-      make: "60cc Urban Glide Scooter",
-      model: "DB50QT - 11",
-      imageName: features3,
-      features: [
-        { content: "Digital dashboard with top speed 40 Mph", icon: speed },
-        { content: "Economical 120 miles per charge", icon: battery },
-        {
-          content: "Fully automatic with Eco & Sport riding modes",
-          icon: current,
-        },
-        { content: "Anti-theft smart lock system", icon: security },
-      ],
-    },
+
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 

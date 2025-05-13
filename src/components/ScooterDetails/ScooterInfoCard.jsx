@@ -1,4 +1,4 @@
-import React from "react";
+
 const ScooterInfoCard = ({ icons, details, title }) => {
   return (
     <div className="bg-[#171717] py-[7.81px]  rounded-[7.808px] flex flex-col items-center justify-center size-[89px]">

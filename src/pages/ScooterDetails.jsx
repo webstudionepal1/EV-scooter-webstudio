@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar/Navbar";
 import logo from "@/assets/images/nata_logo.png";
 import aboutImage from "@/assets/images/scooter_banner.jpeg";
 import TopHeader from "../components/TopHeader";
-import scooter from "@/assets/images/scooter.png";
+import scooter from "@/assets/images/scooter5.png";
 import ScooterInfoCard from "../components/ScooterDetails/ScooterInfoCard";
 import range from "@/assets/images/icons/range.png";
 import topSpeed from "@/assets/images/icons/topSpeed.png";
@@ -12,10 +12,10 @@ import headLight from "@/assets/images/headlight.jpeg";
 import seat from "@/assets/images/seat.jpeg";
 import wheel from "@/assets/images/wheel.jpeg";
 import charge from "@/assets/images/charge.jpeg";
-import carousel1 from "@/assets/images/carousel1.png";
-import carousel2 from "@/assets/images/carousel2.png";
-import carousel3 from "@/assets/images/carousel3.png";
-import { Icon } from "@iconify/react";
+import { useState } from "react";
+import carousel1 from "@/assets/images/scooter5.png";
+import carousel2 from "@/assets/images/scooter8.png";
+import carousel3 from "@/assets/images/scooter1.png";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -33,34 +33,83 @@ import tickScooterImage from "@/assets/images/icons/tickScooter.png";
 import { Button } from "@/components/UI/Button";
 import Footer from "@/components/Footer/Footer";
 
+const accordionData = [
+  {
+    title: "Motor",
+    description:
+      "Type: Brushless DC motor<br/>Power: 40 kW (53 hp)<br/>Torque: 85 Nm",
+  },
+  {
+    title: "Battery",
+    description:
+      "Type: Lithium-ion<br />Capacity: 10 kWh<br />Voltage: 96V<br />Charging time: 3 hours (fast charging)",
+  },
+  {
+    title: "Performance",
+    description:
+      "Top speed: 160 km/h (99 mph)<br />Acceleration (0-100 km/h): 4.5 seconds<br />Range: Up to 200 km (124 miles) on a single charge (city riding)",
+  },
+  {
+    title: "Chassis",
+    description:
+      "Frame: Steel trellis frame<br />Suspension: Front telescopic fork, rear mono-shock<br />Brakes: Front and rear disc brakes with ABS",
+  },
+  {
+    title: "Dimensions",
+    description:
+      "Length: 2,000 mm<br />Width: 800 mm<br />Height: 1,100 mm<br />Seat height: 800 mm<br />Ground clearance: 150 mm<br />Weight: 180 kg (396 lbs)",
+  },
+];
+
+const variants = [
+  {
+    id: 1,
+    name: "Blue Sky",
+    image: carousel1,
+  },
+  {
+    id: 2,
+    name: "Red",
+    image: carousel2,
+  },
+  {
+    id: 3,
+    name: "Ruby Red",
+    image: carousel3,
+  },
+]
+
+
 const ScooterDetails = () => {
-  const accordionData = [
-    {
-      title: "Motor",
-      description:
-        "Type: Brushless DC motor<br/>Power: 40 kW (53 hp)<br/>Torque: 85 Nm",
-    },
-    {
-      title: "Battery",
-      description:
-        "Type: Lithium-ion<br />Capacity: 10 kWh<br />Voltage: 96V<br />Charging time: 3 hours (fast charging)",
-    },
-    {
-      title: "Performance",
-      description:
-        "Top speed: 160 km/h (99 mph)<br />Acceleration (0-100 km/h): 4.5 seconds<br />Range: Up to 200 km (124 miles) on a single charge (city riding)",
-    },
-    {
-      title: "Chassis",
-      description:
-        "Frame: Steel trellis frame<br />Suspension: Front telescopic fork, rear mono-shock<br />Brakes: Front and rear disc brakes with ABS",
-    },
-    {
-      title: "Dimensions",
-      description:
-        "Length: 2,000 mm<br />Width: 800 mm<br />Height: 1,100 mm<br />Seat height: 800 mm<br />Ground clearance: 150 mm<br />Weight: 180 kg (396 lbs)",
-    },
-  ];
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) => (prevIndex === 0 ? variants.length - 1 : prevIndex - 1))
+  }
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex === variants.length - 1 ? 0 : prevIndex + 1))
+  }
+
+  const getVisibleVariants = () => {
+    const result = []
+    const length = variants.length
+
+    // Previous variant
+    const prevIndex = activeIndex === 0 ? length - 1 : activeIndex - 1
+    result.push({ ...variants[prevIndex], position: "left" })
+
+    // Active variant
+    result.push({ ...variants[activeIndex], position: "center" })
+
+    // Next variant
+    const nextIndex = activeIndex === length - 1 ? 0 : activeIndex + 1
+    result.push({ ...variants[nextIndex], position: "right" })
+
+    return result
+  }
+
+  const visibleVariants = getVisibleVariants()
 
   return (
     <div>
@@ -81,7 +130,7 @@ const ScooterDetails = () => {
           <img
             src={scooter}
             alt=""
-            className="absolute -bottom-30 left-1/2 -translate-x-1/2"
+            className="absolute -bottom-15  left-1/2 -translate-x-1/2"
           />
         </div>
         <div className="h-full w-full lg:px-5 xl:px-30 absolute">
@@ -104,7 +153,7 @@ const ScooterDetails = () => {
         </div>
       </div>
       {/* Power and precision */}
-      <div className="relative top-[500px] w-full h-[770px] lg:px-5 xl:px-30">
+      <div className="relative top-[400px] w-full h-[770px] lg:px-5 xl:px-30">
         <h1 className="font-Playfair text-[#000] text-[40px] font-[700] text-center mt-32">
           Power & Precision
         </h1>
@@ -134,65 +183,68 @@ const ScooterDetails = () => {
       </div>
 
       {/* Variant */}
-      <div className="w-full relative top-[430px] py-9 bg-[#F5F5F5]">
+      <div className="w-full relative top-[200px] pt-9 bg-[#F5F5F5]">
         <h1 className="font-Playfair font-bold text-3xl md:text-4xl text-center text-black">
           Variant
         </h1>
 
         {/* Carousels */}
-        <div className="mt-12 flex flex-col lg:flex-row items-center justify-center gap-4 lg:h-[776px] px-4">
-          {/* inactive left */}
-          <div
-            className="hidden lg:block w-[40%] max-w-[600px] h-[300px] lg:h-[567.95px] bg-cover bg-center bg-no-repeat opacity-35"
-            style={{
-              background: `url(${carousel1}) center center / cover no-repeat`,
-            }}
-          ></div>
+        <div className="relative flex items-center justify-center h-[500px] md:h-[900px] overflow-hidden">
+          {/* Left arrow */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-4 z-10 bg-black rounded-full p-2 shadow-md cursor-pointer transition-colors"
+            aria-label="Previous variant"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M17.1799 3.58472L18.2344 4.66472L10.8994 11.9997L18.2344 19.3347L17.1799 20.4147L9.30487 12.5397L8.76637 11.9997L9.30487 11.4597L17.1799 3.58472ZM11.9299 3.58472L12.9851 4.66472L5.64787 11.9997L12.9844 19.3347L11.9299 20.4147L4.05487 12.5397L3.51637 11.9997L4.05487 11.4597L11.9299 3.58472Z" fill="white" />
+            </svg>
+          </button>
 
-          {/* active */}
-          <div className="flex flex-col items-center">
-            <div className="flex items-center justify-center h-[300px] md:h-[400px] lg:h-[567.95px] w-full max-w-[797px]">
-              <div className="p-2 bg-black rounded-full cursor-pointer">
-                <Icon
-                  icon="icons8:double-left"
-                  width="24"
-                  height="24"
-                  style={{ color: "#fff" }}
-                />
-              </div>
-              <div className="w-[80%] h-full mx-4">
-                <img
-                  src={carousel2}
-                  alt=""
-                  className="w-full h-full object-cover object-center rounded-lg"
-                />
-              </div>
-              <div className="p-2 bg-black rounded-full cursor-pointer">
-                <Icon
-                  icon="icons8:double-right"
-                  width="24"
-                  height="24"
-                  style={{ color: "#fff" }}
-                />
-              </div>
-            </div>
-            <h1 className="font-Playfair text-center text-lg md:text-xl font-bold mt-4">
-              Blue Sky
-            </h1>
+          {/* Images */}
+          <div className="relative w-full flex justify-center items-center">
+            {visibleVariants.map((variant) => {
+              const position = variant.position
+
+              return (
+                <div
+                  key={variant.id}
+                  className={`absolute transition-all duration-300 ease-in-out ${position === "left"
+                    ? "lg:-left-40 hidden lg:block -translate-x-1/4 opacity-40 scale-75 z-0"
+                    : position === "right"
+                      ? "lg:-right-40 hidden lg:block translate-x-1/4 opacity-40 scale-75 z-0"
+                      : "opacity-100 z-10"
+                    }`}
+                >
+                  <img
+                    src={variant.image}
+                    alt={variant.name}
+                    width={800}
+                    height={800}
+                    className="object-contain"
+                    priority={position === "center"}
+                  />
+                  {position === "center" && <div className="font-Playfair text-center text-lg md:text-xl font-bold mt-4">{variant.name}</div>}
+                </div>
+              )
+            })}
           </div>
 
-          {/* inactive right */}
-          <div
-            className="hidden lg:block w-[40%] max-w-[600px] h-[300px] lg:h-[567.95px] bg-cover bg-center bg-no-repeat opacity-35"
-            style={{
-              background: `url(${carousel3}) center center / cover no-repeat`,
-            }}
-          ></div>
+          {/* Right arrow */}
+          <button
+            onClick={handleNext}
+            className="absolute right-4 z-10 bg-black rounded-full p-2 shadow-md cursor-pointer transition-colors"
+            aria-label="Next variant"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M6.82012 20.4153L5.76563 19.3353L13.1006 12.0003L5.76563 4.66528L6.82013 3.58529L14.6951 11.4603L15.2336 12.0003L14.6951 12.5403L6.82012 20.4153ZM12.0701 20.4153L11.0149 19.3353L18.3521 12.0003L11.0156 4.66529L12.0701 3.58529L19.9451 11.4603L20.4836 12.0003L19.9451 12.5403L12.0701 20.4153Z" fill="white" />
+            </svg>
+          </button>
         </div>
       </div>
 
       {/* Detail specification */}
-      <div className="w-full relative top-[500px] lg:px-5 xl:px-30">
+      <div className="w-full relative top-[200px] px-5 lg:px-5 xl:px-30">
         <h1 className="font-Playfair font-[700] text-[40px] text-center text-[#000] mt-12">
           Detail Specification
         </h1>
@@ -262,7 +314,7 @@ const ScooterDetails = () => {
         </div>
       </div>
       {/* Ready to Drive into the Future */}
-      <div className="w-full relative top-[500px] lg:px-5 xl:px-30 py-[47px] bg-[#049140] mt-25">
+      <div className="w-full relative top-[200px]  px-4 lg:px-5 xl:px-30 py-[47px] bg-[#049140] mt-25">
         <div className="flex justify-between items-center">
           <h1 className="font-Playfair text-[#F5F5F5] text-[24px] font-[800] ">
             Ready to Drive into the Future
@@ -279,7 +331,7 @@ const ScooterDetails = () => {
       </div>
 
       {/* Footer */}
-      <div className="relative top-[500px]">
+      <div className="relative top-[200px]">
         <Footer />
       </div>
     </div>
