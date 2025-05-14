@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div className="w-full">
+    <div>
       <Navbar navMenuItemColor={"#000"} logo={logo} />
       <HeroSection />
       <About />
@@ -70,7 +70,7 @@ const App = () => {
       <Trending />
       {/* Parts */}
 
-      <div className="xl:px-30 lg:px-5 px-4 my-20 w-full">
+      <div className="xl:px-30 lg:px-5 px-4 my-20">
         <header className="mb-12 flex flex-col items-center justify-center gap-3">
           <h2 className="text-[#444] font-[600] font-Playfair tracking-[2.4px] text-[clamp(16px,30vw,24px)] text-center">
             PARTS
@@ -112,7 +112,7 @@ const App = () => {
               Join Our Exclusive <br /> Community And Stay Updated
             </h1>
           </div>
-          <div className="2xl:w-2/5 h-15 flex items-center p-5 gap-3 bg-white rounded-full overflow-hidden">
+          <div className=" h-15 flex items-center p-5 gap-3 bg-white rounded-full overflow-hidden">
             <input
               type="text"
               placeholder="Enter your email"
@@ -128,9 +128,8 @@ const App = () => {
             </button>
           </div>
         </div>
-
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -13,7 +13,7 @@ const HeroSection = () => {
   const products = [
     { name: "Velozip", model: "RAZOR", imageName: hero1 },
     { name: "SpeedX", model: "F1-PRO", imageName: hero2 },
-    { name: "Zoomster", model: "MOPED", imageName: hero3 },
+    { name: "Zoomster", model: "S1-PRO", imageName: hero3 },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
@@ -36,7 +36,7 @@ const HeroSection = () => {
       <div className="relative w-full h-fit left-0 lg:-top-5 ">
         {/* image */}
         <div className="absolute z-50 left-1/2 top-1/3 transform -translate-x-1/2 -translate-y-1/2 ">
-          <div className="2xl:w-[910.573px] 2xl:h-[688.299px] xl:h-[721px] xl:w-[670.195px] lg:w-[521px] lg:h-[570px] md:h-[410px] md:w-[400px] sm:w-[300px] sm:h-[400px] w-[230px] h-[380px] -rotate-30 ">
+          <div className="2xl:w-[910.573px] 2xl:h-[688.299px] xl:h-[721px] xl:w-[670.195px] lg:w-[540px] lg:h-[590px] md:h-[410px] md:w-[400px] sm:w-[300px] sm:h-[400px] w-[230px] h-[380px] -rotate-30 ">
             <AnimatePresence mode="wait">
               <motion.img
                 key={products[activeIndex].imageName}

@@ -5,10 +5,38 @@ import TopHeader from "../components/TopHeader";
 import ScooterCard from "../components/Scooter/ScooterCard";
 import scooter1 from "@/assets/images/scooter1.png";
 import scooter2 from "@/assets/images/scooter2.png";
-import scooter3 from "@/assets/images/scooter3.png";
+import scooter3 from "@/assets/images/scooter8.png";
 import Footer from "@/components/Footer/Footer";
 
 const Scooters = () => {
+  // Static scooter data
+  const scooterData = [
+    {
+      id: 1,
+      title: "RAZOR",
+      imageName: scooter1,
+      range: "120 KM/Hr",
+      topSpeed: "60 KM/Hr",
+      motorPower: "2000 Watt",
+    },
+    {
+      id: 2,
+      title: "F1-PRO",
+      imageName: scooter2,
+      range: "100 KM/Hr",
+      topSpeed: "65 KM/Hr",
+      motorPower: "2000 Watt",
+    },
+    {
+      id: 3,
+      title: "S1-PRO",
+      imageName: scooter3,
+      range: "100 KM/Hr",
+      topSpeed: "60 KM/Hr",
+      motorPower: "2000 Watt",
+    },
+  ];
+
   return (
     <div>
       <Navbar
@@ -25,90 +53,16 @@ const Scooters = () => {
       {/* scooters */}
       <div className="px-5 xl:px-30 relative top-[500px] ">
         <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center gap-y-6">
-          <ScooterCard
-            title="Autoev R100"
-            imageName={scooter1}
-            range="100 KM"
-            topSpeed="70 Km/h"
-            motorPower="3000 Watt"
-          />
-          <ScooterCard
-            title="Autoev R200"
-            imageName={scooter2}
-            range="130 KM"
-            topSpeed="100 Km/h"
-            motorPower="3500 Watt"
-          />
-          <ScooterCard
-            title="Autoev R300"
-            imageName={scooter3}
-            range="150 KM"
-            topSpeed="120 Km/h"
-            motorPower="4000 Watt"
-          />
-          <ScooterCard
-            title="Autoev R100"
-            imageName={scooter1}
-            range="100 KM"
-            topSpeed="70 Km/h"
-            motorPower="3000 Watt"
-          />
-          <ScooterCard
-            title="Autoev R200"
-            imageName={scooter2}
-            range="130 KM"
-            topSpeed="100 Km/h"
-            motorPower="3500 Watt"
-          />
-          <ScooterCard
-            title="Autoev R300"
-            imageName={scooter3}
-            range="150 KM"
-            topSpeed="120 Km/h"
-            motorPower="4000 Watt"
-          />
-          <ScooterCard
-            title="Autoev R100"
-            imageName={scooter1}
-            range="100 KM"
-            topSpeed="70 Km/h"
-            motorPower="3000 Watt"
-          />
-          <ScooterCard
-            title="Autoev R200"
-            imageName={scooter2}
-            range="130 KM"
-            topSpeed="100 Km/h"
-            motorPower="3500 Watt"
-          />
-          <ScooterCard
-            title="Autoev R300"
-            imageName={scooter3}
-            range="150 KM"
-            topSpeed="120 Km/h"
-            motorPower="4000 Watt"
-          />
-          <ScooterCard
-            title="Autoev R100"
-            imageName={scooter1}
-            range="100 KM"
-            topSpeed="70 Km/h"
-            motorPower="3000 Watt"
-          />
-          <ScooterCard
-            title="Autoev R200"
-            imageName={scooter2}
-            range="130 KM"
-            topSpeed="100 Km/h"
-            motorPower="3500 Watt"
-          />
-          <ScooterCard
-            title="Autoev R300"
-            imageName={scooter3}
-            range="150 KM"
-            topSpeed="120 Km/h"
-            motorPower="4000 Watt"
-          />
+          {scooterData.map((scooter) => (
+            <ScooterCard
+              key={scooter.id}
+              title={scooter.title}
+              imageName={scooter.imageName}
+              range={scooter.range}
+              topSpeed={scooter.topSpeed}
+              motorPower={scooter.motorPower}
+            />
+          ))}
         </div>
       </div>
 

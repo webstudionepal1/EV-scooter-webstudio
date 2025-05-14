@@ -3,27 +3,25 @@ import logo from "@/assets/images/footer_logo.png";
 import { Icon } from "@iconify/react";
 const Footer = () => {
   return (
-    <div className="xl:px-30 lg:px-5 px-[16px] mt-10 py-10">
-      <hr className="w-[95%] m-auto border-[#DBDBDB]" />
-      <div className="flex flex-col mt-10">
+    <div className="xl:px-30 lg:px-5 px-4 md:mt-10 mt-5 py-10">
+      <hr className="w-[100%]  border-[#DBDBDB]" />
+      <div className="flex flex-col ">
         {/* Upper section of footer */}
-        <div className="flex flex-col md:flex-row md:justify-between items-center w-full">
-          <div className="w-[160px] h-[110px]">
-            <img src={logo} alt="" className="h-full w-full object-cover" />
+        <div className="flex flex-col md:flex-row md:justify-between items-center">
+          <div className="w-[160px] h-[110px] md:w-[160px] md:h-[110px]">
+            <img src={logo} alt="logo" className="h-full w-full object-cover" />
           </div>
 
-
-            <ul className="flex md:gap-10 gap-[3px] text-[#444] md:text-lg text-sm font-Poppins md:justify-end justify-between w-full" >
-              <li>About Us </li>
-              <li>Services</li>
-              <li>Our Conditions</li>
-              <li>Policy</li>
-              <li>Contact</li>
-            </ul>
+          <ul className="flex md:gap-10 gap-[3px] text-[#444] md:text-lg text-sm font-Poppins md:justify-end md:flex-row flex-col items-center w-full" >
+            <li>About Us </li>
+            <li>Services</li>
+            <li>Our Conditions</li>
+            <li>Policy</li>
+            <li>Contact</li>
+          </ul>
 
         </div>
-
-        <hr className="w-[95%] m-auto border-[#DBDBDB]" />
+        <hr className="w-[100%]  border-[#DBDBDB]" />
         {/* Lower section of footer */}
         <div className="flex justify-between mt-10">
           <p className="text-[#000] text-lg font-Poppins flex imtes-center gap-2">

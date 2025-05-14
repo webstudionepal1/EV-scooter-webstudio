@@ -67,8 +67,8 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
       {showMenu ? (
         <div
           className={`fixed top-0 h-screen z-80 w-[18rem] bg-gray-300 rounded-r-3xl transition-all duration-500 ease-in-out transform ${showMenu
-              ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 -translate-y-5 pointer-events-none"
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-5 pointer-events-none"
             }`}
         >
           <div className=" flex gap-10 items-center h-[94px]">
