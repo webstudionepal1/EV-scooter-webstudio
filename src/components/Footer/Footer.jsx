@@ -1,7 +1,9 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "@/assets/images/footer_logo.png";
 import { Icon } from "@iconify/react";
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="xl:px-30 lg:px-5 px-4 md:mt-10 mt-5 py-10">
       <hr className="w-[100%]  border-[#DBDBDB]" />
@@ -12,12 +14,12 @@ const Footer = () => {
             <img src={logo} alt="logo" className="h-full w-full object-cover" />
           </div>
 
-          <ul className="flex md:gap-10 gap-[3px] text-[#444] md:text-lg text-sm font-Poppins md:justify-end md:flex-row flex-col items-center w-full" >
-            <li>About Us </li>
-            <li>Services</li>
-            <li>Our Conditions</li>
-            <li>Policy</li>
-            <li>Contact</li>
+          <ul className="flex md:gap-10 gap-[3px] text-[#444] md:text-lg text-sm font-Poppins md:justify-end md:flex-row flex-col items-center cursor-pointer w-full" >
+            <li onClick={() => { navigate("/about") }}>About Us </li>
+            <li onClick={() => { navigate("/features") }}>Parts</li>
+            <li onClick={() => { navigate("/condition") }}>Our Conditions</li>
+            <li onClick={() => { navigate("/policy") }}>Policy</li>
+            <li onClick={() => { navigate("/contact") }}>Contact</li>
           </ul>
 
         </div>
@@ -31,15 +33,15 @@ const Footer = () => {
             2025 Electric Scooter
           </p>
           <div className="flex gap-5 text-[#000] text-lg font-Poppins">
-            <button>
+            <a href="https://www.facebook.com/" className="cursor-pointer">
               <Icon icon="mdi:facebook" width="30" height="30" />
-            </button>
-            <button>
+            </a>
+            <a href="https://www.youtube.com/" className="cursor-pointer">
               <Icon icon="mdi:youtube" width="30" height="30" />
-            </button>
-            <button>
-              <Icon icon="mdi:instagram" width="30" height="30" />
-            </button>
+            </a>
+            <a href="https://www.facebook.com/" className="cursor-pointer">
+              <Icon icon="ix:tiktok-logo" width="30" height="30" />
+            </a>
           </div>
         </div>
       </div>

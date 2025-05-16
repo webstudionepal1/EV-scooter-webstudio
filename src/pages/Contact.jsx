@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar/Navbar";
 import logo from "@/assets/images/logo_white.png";
 import aboutImage from "@/assets/images/about_banner.jpeg";
@@ -7,18 +9,58 @@ import contact1 from "@/assets/images/icons/contact1.png";
 import contact2 from "@/assets/images/icons/contact2.png";
 import contact3 from "@/assets/images/icons/contact3.png";
 import contactBanner from "@/assets/images/contact_banner.jpeg";
-import {Button} from "@/components/UI/Button";
+import { Button } from "@/components/UI/Button";
 import Footer from "@/components/Footer/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+
+const contactInfoData = [
+  {
+    title: "Our Location",
+    description: "Putalisadak, Kathmandu, Nepal",
+    imageName: contact1,
+  },
+  {
+    title: "Email Address",
+    description: "info@NataEnterprise.com.np Lamsal.Manju77@gmail.com",
+    imageName: contact2,
+  },
+  {
+    title: "Phone Number",
+    description: "9808474289, 9841910800, 9851133949",
+    imageName: contact3,
+  },
+];
 
 const Contact = () => {
+  const form = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_i2biuwl",
+        "template_xampy6o",
+        form.current,
+        "s8-Nyr2m0uhdRxNVI"
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+        },
+        () => {
+          toast.error("Failed to send the message, please try again.");
+        }
+      );
+
+    e.target.reset();
+  };
+
   return (
     <div>
-      <Navbar
-        navMenuItemColor={"#F5F5F5"}
-        logo={logo}
-        hamburgerMenuColor="#F5F5F5"
-      />
+      <Navbar navMenuItemColor={"#F5F5F5"} logo={logo} hamburgerMenuColor="#F5F5F5" />
       <TopHeader
         imgName={aboutImage}
         title="Contact Us"
@@ -26,34 +68,18 @@ const Contact = () => {
         breadcrumb="Contact Us"
       />
       <div className="px-5 xl:px-30 relative top-[500px]">
-        <div className="font-Playfair w-fit m-auto">
-          <h2 className="text-[#444] text-[24px] font-[600] self-stretch text-center">
-            Have any question? so please
-          </h2>
-          <h3 className="text-[#000] text-[40px] font-[600] self-stretch text-center mt-3">
-            Feel Free to Contact
-          </h3>
+        <div className="font-Playfair w-fit m-auto text-center">
+          <h2 className="text-[#444] text-[24px] font-[600]">Have any question? so please</h2>
+          <h3 className="text-[#000] text-[40px] font-[600] mt-3">Feel Free to Contact</h3>
         </div>
         <div className="flex flex-col md:flex-row gap-6 m-auto w-fit mt-[46px]">
-          <ContactInf
-            title="Our Location"
-            description="Putalisadak, Kathmandu, Nepal"
-            imageName={contact1}
-          />
-          <ContactInf
-            title="Email Address"
-            description="info@eletric.com.np"
-            imageName={contact2}
-          />
-          <ContactInf
-            title="Phone Number"
-            description="+977-9866875210"
-            imageName={contact3}
-          />
+          {contactInfoData.map((item, index) => (
+            <ContactInf key={index} {...item} />
+          ))}
         </div>
       </div>
 
-      {/* form */}
+      {/* Form */}
       <div
         className="w-full h-[540px] relative top-[570px] px-5 xl:px-30 py-[54px]"
         style={{
@@ -63,49 +89,61 @@ const Contact = () => {
           backgroundSize: "cover",
         }}
       >
-        <form className="p-6 rounded-2 bg-[#F5F5F5] shadow-md flex flex-col gap-[18px] w-fit m-auto md:m-0">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="p-6 rounded-2 bg-[#F5F5F5] shadow-md flex flex-col gap-[18px] w-fit m-auto md:m-0"
+        >
           <h1 className="font-Playfair font-[700] text-[24px] text-[#000] uppercase">
             Get In Touch
           </h1>
           <div className="flex flex-col gap-[16px] md:w-[592px] w-[320px]">
-            <div className="flex gap-[25px] md:max-w-[592px]">
+            <div className="flex gap-[25px]">
               <div className="w-1/2">
                 <input
                   type="text"
+                  name="user_name"
                   placeholder="Name"
-                  className="px-[10px] py-[12px] text-Poppins text-[14px] font-[400] w-full border-[0.6px] border-solid border-[#999] text-[#858585] rounded-[4px]"
+                  required
+                  className="px-[10px] py-[12px] w-full border border-[#999] text-[#858585] rounded-[4px] text-[14px]"
                 />
               </div>
               <div className="w-1/2">
                 <input
-                  type=""
+                  type="text"
+                  name="user_phone"
                   placeholder="Phone Number"
-                  className="px-[10px] py-[12px] text-Poppins text-[14px] font-[400] w-full border-[0.6px] border-solid border-[#999] text-[#858585] rounded-[4px]"
+                  className="px-[10px] py-[12px] w-full border border-[#999] text-[#858585] rounded-[4px] text-[14px]"
                 />
               </div>
             </div>
-
-            <div className="w-full">
-              <input
-                type="text"
-                placeholder="Email address"
-                className="px-[10px] py-[12px] text-Poppins text-[14px] font-[400] w-full border-[0.6px] border-solid border-[#999] text-[#858585] rounded-[4px]"
-              />
-            </div>
-            <div className="w-full">
-              <textarea
-                placeholder="Leave Message here..."
-                className="px-[10px] py-[12px] h-[153px] text-Poppins text-[14px] font-[400] w-full border-[0.6px] border-solid border-[#999] text-[#858585] rounded-[4px]"
-              />
-            </div>
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Email address"
+              required
+              className="px-[10px] py-[12px] w-full border border-[#999] text-[#858585] rounded-[4px] text-[14px]"
+            />
+            <textarea
+              name="message"
+              placeholder="Leave Message here..."
+              required
+              className="px-[10px] py-[12px] h-[153px] w-full border border-[#999] text-[#858585] rounded-[4px] text-[14px]"
+            />
+            <ToastContainer position="top-right" autoClose={3000} />
           </div>
-          <Button title="Send Message" bgColor="#000" hoverBgColor="#00C853" textColor="#fff" hoverTextColor="#fff" />
+          <Button
+            title="Send Message"
+            bgColor="#000"
+            hoverBgColor="#00C853"
+            textColor="#fff"
+            hoverTextColor="#fff"
+          />
         </form>
       </div>
 
-      {/* footer */}
       <div className="relative top-[500px]">
-            <Footer />
+        <Footer />
       </div>
     </div>
   );

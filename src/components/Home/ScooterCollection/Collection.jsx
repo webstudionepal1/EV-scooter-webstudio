@@ -1,7 +1,7 @@
 import collection from "@/assets/images/vector/collection.png";
-import collection1 from "@/assets/images/vector/collection4.png";
-import collection2 from "@/assets/images/vector/collection.png";
-import collection3 from "@/assets/images/vector/collection4.png";
+import collection1 from "@/assets/images/vector/collection5.png";
+
+
 import { Icon } from "@iconify/react";
 import { useNavigate } from 'react-router-dom';
 
@@ -9,24 +9,16 @@ import { useNavigate } from 'react-router-dom';
 const scooterCollections = [
   {
     id: 1,
-    title: "White Luxury Scooter",
+    title: "RAZOR",
     image: collection,
   },
   {
     id: 2,
-    title: "Black Urban Scooter",
+    title: "F1-PRO",
     image: collection1,
   },
-  {
-    id: 3,
-    title: "Red Sport Scooter",
-    image: collection2,
-  },
-  {
-    id: 4,
-    title: "Blue Electric Scooter",
-    image: collection3,
-  },
+
+
 ];
 
 const Collection = () => {
@@ -40,7 +32,7 @@ const Collection = () => {
   };
 
   return (
-    <div className="  lg:px-5 mt-20">
+    <div className=" xl:px-30 lg:px-5 mt-20">
       <div className="flex-col items-center gap-4 lg:gap-4 flex-[0_0_auto] flex relative">
         <h2 className="text-[#444] font-[600] font-Playfair tracking-[2.4px] text-2xl text-center">
           SCOOTER COLLECTION
@@ -53,18 +45,18 @@ const Collection = () => {
         </button>
 
         {/* Image container */}
-        <div className="grid  lg:grid-cols-4 grid-cols-1 gap-x-10 lg:gap-x-10  gap-y-10  mt-7 self-stretch  place-items-center">
+        <div className="grid  lg:grid-cols-4 grid-cols-1 gap-x-10 lg:gap-x-10  gap-y-10  mt-7 px-4">
           {scooterCollections.map((scooter) => (
             <div
               key={scooter.id}
             >
-              <div className="relative">
+              <div className="relative ">
                 <img
                   src={scooter.image}
                   alt={scooter.title}
-                  className="w-full h-full object-cover"
+                  className="bg-[C4C4C4]"
                 />
-                <button onClick={handleClicked} className="2xl:p-4 xl:p-[5px] md:p-4 p-[4px] rounded-full bg-black absolute right-2 bottom-0 cursor-pointer hover:bg-[#00C853] ">
+                <button onClick={handleClicked} className="  p-[4px] rounded-full bg-black absolute right-2 bottom-0 cursor-pointer hover:bg-[#00C853] ">
                   <Icon
                     icon="iconamoon:arrow-top-right-1-light"
                     color="white"

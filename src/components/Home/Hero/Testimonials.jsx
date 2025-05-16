@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
-import { Icon } from "@iconify/react";
+import ellipse1 from "@/assets/images/vector/ellipse1.png"
+import ellipse2 from "@/assets/images/vector/ellipse2.png"
+import ellipse3 from "@/assets/images/vector/ellipse3.png"
 
 const Testimonials = () => {
   const [maxAvatars, setMaxAvatars] = React.useState(3);
@@ -42,57 +44,42 @@ const Testimonials = () => {
         }}
       >
         <Avatar
-          alt="Remy Sharp"
-          src="/static/images/avatar/1.jpg"
+          alt="A"
+          src={ellipse1}
           sx={{
             width: { md: 30, lg: 40, xl: 50 },
             height: { md: 30, lg: 40, xl: 50 },
           }}
         />
         <Avatar
-          alt="Travis Howard"
-          src="/static/images/avatar/2.jpg"
+          alt="B"
+          src={ellipse2}
           sx={{
             width: { md: 30, lg: 40, xl: 50 },
             height: { md: 30, lg: 40, xl: 50 },
           }}
         />
         <Avatar
-          alt="Travis Howard"
-          src="/static/images/avatar/2.jpg"
+          alt="C"
+          src={ellipse3}
           sx={{
             width: { md: 30, lg: 40, xl: 50 },
             height: { md: 30, lg: 40, xl: 50 },
           }}
         />
         <Avatar
-          alt="Travis Howard"
+          alt="+"
           src="/static/images/avatar/2.jpg"
           sx={{
             width: { md: 30, lg: 40, xl: 50 },
             height: { md: 30, lg: 40, xl: 50 },
           }}
         />
-        <Avatar
-          alt="Travis Howard"
-          src="/static/images/avatar/2.jpg"
-          sx={{
-            width: { md: 30, lg: 40, xl: 50 },
-            height: { md: 30, lg: 40, xl: 50 },
-          }}
-        />
-        <Avatar
-          alt="Travis Howard"
-          src="/static/images/avatar/2.jpg"
-          sx={{
-            width: { md: 30, lg: 40, xl: 50 },
-            height: { md: 30, lg: 40, xl: 50 },
-          }}
-        />
+
       </AvatarGroup>
       <p className="text-[#44444] text-xs md:text-sm lg:text-base font-Poppins 2xl:text-xl">
         10k Positive reviews achieved{" "}
-        <span>
+        {/* <span>
           <Icon
             icon="material-symbols:star"
 
@@ -121,7 +108,7 @@ const Testimonials = () => {
             inline={true}
             className="inline-block size-3 md:size-6"
           />
-        </span>
+        </span> */}
       </p>
     </div>
   );

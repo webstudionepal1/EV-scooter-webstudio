@@ -7,6 +7,8 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import ScooterDetails from "./pages/ScooterDetails";
 import BlogDetails from "./pages/BlogDetails";
+import Condtion from "./pages/Condtion";
+import Policy from "./pages/Policy";
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +21,10 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/scooterDetails" element={<ScooterDetails />} />
         <Route path="/blogDetails" element={<BlogDetails />} />
+        <Route path="/condition" element={<Condtion />} />
+        <Route path="/policy" element={<Policy />} />
+        <Route path="/blog-details/:id" element={<BlogDetails />} />
+        <Route path="/scooter-details/:id" element={<ScooterDetails />} />
       </Routes>
     </BrowserRouter>
   );

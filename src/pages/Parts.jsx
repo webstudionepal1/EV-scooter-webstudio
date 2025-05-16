@@ -3,14 +3,14 @@ import logo from "@/assets/images/logo_white.png";
 import Navbar from "../components/Navbar/Navbar";
 import aboutImage from "@/assets/images/about_banner.jpeg";
 import TopHeader from "../components/TopHeader";
-import PartsCard from "../components/Parts/PartsCard";
-import battery from "@/assets/images/Parts_Images/battery.png";
-import tyres from "@/assets/images/Parts_Images/tyres.png";
-import headlight from "@/assets/images/Parts_Images/headlight.png";
-import { Icon } from "@iconify/react";
+// import PartsCard from "../components/Parts/PartsCard";
+// import battery from "@/assets/images/Parts_Images/battery.png";
+// import tyres from "@/assets/images/Parts_Images/tyres.png";
+// import headlight from "@/assets/images/Parts_Images/headlight.png";
+// import { Icon } from "@iconify/react";
 
-import motor from "@/assets/images/Parts_Images/motor.png";
-import suspension from "@/assets/images/Parts_Images/suspension.png";
+// import motor from "@/assets/images/Parts_Images/motor.png";
+// import suspension from "@/assets/images/Parts_Images/suspension.png";
 import Footer from "../components/Footer/Footer";
 
 const Parts = () => {
@@ -33,11 +33,11 @@ const Parts = () => {
             PARTS
           </h2>
           <h1 className="text-[#000] font-[700] font-Playfair text-[clamp(30px,30vw,40px)] text-center tracking-[2.4px]">
-            E-Rider Accessories
+            E-Rider Accessories Available
           </h1>
         </header>
 
-        <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[29px] gap-y-[46px] place-items-stretch place-content-between">
+        {/* <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-[29px] gap-y-[46px] place-items-stretch place-content-between">
           <PartsCard
             imageName={battery}
             title="48V 24Ah Lithium Ion Battery Pack"
@@ -88,9 +88,11 @@ const Parts = () => {
             title="Ather 450X LED Headlamp Unit"
             model="HS1 12V 35/35W"
           />
-        </div>
+        </div> */}
+
         {/* Pagination */}
-        <div className="flex items-center md:justify-end justify-center gap-2 my-10">
+
+        {/* <div className="flex items-center md:justify-end justify-center gap-2 my-10">
           <button className="p-[4px] bg-[#919EAB] rounded-[4px]">
             <Icon
               icon="lsicon:left-filled"
@@ -122,7 +124,7 @@ const Parts = () => {
               style={{ color: "#C4CDD5" }}
             />
           </button>
-        </div>
+        </div>*/}
       </div>
 
       <div className="relative top-[500px]">

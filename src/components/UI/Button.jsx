@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Button = ({ title, bgColor, hoverBgColor, textColor,hoverTextColor }) => {
+export const Button = ({ title, bgColor, hoverBgColor, textColor, hoverTextColor, onClick }) => {
   return (
     <button
       className={`
@@ -17,6 +17,7 @@ export const Button = ({ title, bgColor, hoverBgColor, textColor,hoverTextColor 
         e.target.style.backgroundColor = bgColor;
         e.target.style.color = textColor;
       }}
+      onClick={onClick}
     >
       {title}
     </button>

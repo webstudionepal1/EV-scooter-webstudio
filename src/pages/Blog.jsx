@@ -1,75 +1,58 @@
-import Navbar from "../components/Navbar/Navbar";
-import logo from "@/assets/images/logo_white.png";
-import aboutImage from "@/assets/images/about_banner.jpeg";
-import TopHeader from "../components/TopHeader";
-import BlogCard from "@/components/Blog/BlogCard";
-import blog1 from "@/assets/images/Blog_Images/blog1.png";
-import blog2 from "@/assets/images/Blog_Images/blog2.png";
-import blog3 from "@/assets/images/Blog_Images/blog3.jpeg";
-import blog4 from "@/assets/images/Blog_Images/blog4.jpeg";
-import blog5 from "@/assets/images/Blog_Images/blog5.jpeg";
-import blog6 from "@/assets/images/Blog_Images/blog6.jpeg";
-import blog7 from "@/assets/images/Blog_Images/blog7.jpeg";
-import blog8 from "@/assets/images/Blog_Images/blog8.jpeg";
-import blog9 from "@/assets/images/Blog_Images/blog9.jpeg";
-import blog10 from "@/assets/images/Blog_Images/blog10.jpeg";
-import blog11 from "@/assets/images/Blog_Images/blog11.jpeg";
-import { Icon } from "@iconify/react";
-import Footer from "@/components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar"
+import logo from "@/assets/images/logo_white.png"
+import aboutImage from "@/assets/images/about_banner.jpeg"
+import TopHeader from "../components/TopHeader"
+import BlogCard from "@/components/Blog/BlogCard"
+import blog from "@/assets/images/blog.jpeg"
+import blog1 from "@/assets/images/Blog_Images/blog1.png"
+import blog2 from "@/assets/images/Blog_Images/blog2.png"
+import { useNavigate } from "react-router-dom"
+import Footer from "@/components/Footer/Footer"
 
 const Blog = () => {
-  
-  const alignments = [
-    "justify-self-start",
-    "justify-self-center",
-    "justify-self-end",
-  ];
+  const navigate = useNavigate()
 
-  const card = [
+  const alignments = ["justify-self-start", "justify-self-center", "justify-self-end"]
+
+  // Updated blog data to include id and content for consistency
+  const blogData = [
     {
-      img: blog1,
+      id: 1,
+      img: blog,
+      day: "08",
+      month: "April",
+      title: "Energy Star Certified Electric Vehicle Chargers",
+      content:
+        "Nisi quis eleifend quam adipiscing at vitae proin sagittis. Vulputate eu scel erisque felis imper diet. Vitae justo eget magna fermentum iaculis non diam phasellus.",
     },
     {
+      id: 2,
+      img: blog1,
+      day: "10",
+      month: "April",
+      title: "Advancements in Electric Vehicle Battery Technology",
+      content:
+        "Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis, quam nulla vehicula felis, eu cursus sem tellus eget elit.",
+    },
+    {
+      id: 3,
       img: blog2,
+      day: "12",
+      month: "April",
+      title: "The Future of Electric Vehicle Charging Infrastructure",
+      content:
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
     },
-    {
-      img: blog3,
-    },
-    {
-      img: blog4,
-    },
-    {
-      img: blog5,
-    },
-    {
-      img: blog6,
-    },
-    {
-      img: blog7,
-    },
-    {
-      img: blog1,
-    },
-    {
-      img: blog8,
-    },
-    {
-      img: blog9,
-    },
-    {
-      img: blog10,
-    },
-    {
-      img: blog11,
-    },
-  ];
+  ]
+
+  // Handle click on blog card to navigate to details page
+  const handleBlogClick = (id) => {
+    navigate(`/blog-details/${id}`)
+  }
+
   return (
     <div>
-      <Navbar
-        navMenuItemColor={"#F5F5F5"}
-        logo={logo}
-        hamburgerMenuColor="#F5F5F5"
-      />
+      <Navbar navMenuItemColor={"#F5F5F5"} logo={logo} hamburgerMenuColor="#F5F5F5" />
       <TopHeader
         imgName={aboutImage}
         title="Blog"
@@ -79,11 +62,17 @@ const Blog = () => {
       {/* Blog List */}
       <div className="px-5 xl:px-30 relative top-[500px]">
         <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-7 gap-x-5 place-content-between place-items-center">
-          {card.map((item, index) => (
-            <BlogCard imgName={item.img} key={index}/>
+          {blogData.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => handleBlogClick(item.id)}
+              className="cursor-pointer hover:opacity-90 transition-opacity duration-300"
+            >
+              <BlogCard imgName={item.img} day={item.day} month={item.month} title={item.title} />
+            </div>
           ))}
         </div>
-        <div className="flex items-center justify-end gap-2 my-10">
+        {/* <div className="flex items-center justify-end gap-2 my-10">
           <button className="p-[4px] bg-[#919EAB] rounded-[4px]">
             <Icon
               icon="lsicon:left-filled"
@@ -115,14 +104,14 @@ const Blog = () => {
               style={{ color: "#C4CDD5" }}
             />
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="relative top-[500px]">
         <Footer />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

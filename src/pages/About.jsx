@@ -13,8 +13,14 @@ import { Button } from "@/components/UI/Button";
 import banner from "@/assets/images/icons/about.png";
 import enquiry from "@/assets/images/enquiry.png";
 import Footer from "@/components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact")
+  }
+
   return (
     <div>
       <Navbar
@@ -56,19 +62,17 @@ const About = () => {
                 Crafting smarter, greener rides for every road.
               </h2>
               <p className="self-stretch text-[#444] font-Poppins font-[400] text-[18px] leading-[40px] text-justify">
-                At Electric, we’re on a mission to transform everyday travel.
-                Our passion lies in designing scooters that are not just modern
-                and stylish, but also sustainable and smart. We believe that a
-                better ride leads to a better world — and we’re committed to
-                making eco-friendly mobility an exciting, accessible reality for
-                everyone.
+                At NATA Enterprises, we are driven by a vision of a cleaner, greener, and more sustainable Nepal. Based in Kathmandu, we are proud to introduce our latest innovation " Green Power" EV Scooters. Designed to revolutionize urban mobility through eco-friendly technology.
+
               </p>
               <p className="self-stretch text-[#444] font-Poppins font-[400] text-[18px] leading-[40px] text-justify">
-                Built with innovation at the core, every Electric scooter is
-                engineered for high performance, reliability, and energy
-                efficiency. Whether it’s your daily commute, a weekend
-                adventure, or simply a way to move freely around the city, we
-                make sure your journey is smooth, safe, and smart.
+                Established with a commitment to quality, innovation, and environmental responsibility, NATA Enterprises brings a new era of electric transportation that aligns with Nepal’s growing need for sustainable solutions. Our electric scooters are not just a mode of transport, they are a step toward reducing carbon emissions, lowering fuel dependency, and creating a smarter way to commute.
+                Backed by a passionate team of engineers, designers, and green energy advocates, we ensure that every "Green Power" EV Scooter is built for efficiency, performance, and affordability,without compromising on style or safety.
+
+              </p>
+              <p className="self-stretch text-[#444] font-Poppins font-[400] text-[18px] leading-[40px] text-justify">
+                Join us on our journey to power Nepal’s future with electric energy. NATA Enterprises —GREEN POWER.
+
               </p>
             </div>
           </div>
@@ -78,16 +82,16 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-[20px] justify-between my-25">
           <Card
             title="Who We Are"
-            description="At Electric, we are riders, innovators, and dreamers shaping the future of mobility. We build stylish, high-performance electric scooters that make city travel cleaner, smarter, and more exciting."
+            description="At Green Power, a brand by Nata Enterprises, we are riders, innovators, and dreamers shaping the future of mobility. We design stylish, high-performance electric scooters that make city travel cleaner, smarter, and more exciting."
           />
           <Card
             title="Our Mission"
-            description="At Electric, our mission is to redefine urban mobility by creating high-performance electric scooters that are not only stylish and smart but also environmentally responsible. We are committed to delivering innovative technology, superior design, and a smooth riding experience, making clean transportation accessible."
+            description="At Green Power, a brand by Nata Enterprises, our mission is to redefine urban mobility by creating high-performance electric scooters that are not only stylish and smart but also environmentally responsible. We are committed to delivering innovative technology, superior design, and a smooth riding experience—making clean transportation accessible to everyone."
             bgColor="#EEFFF4"
           />
           <Card
             title="Our Vision"
-            description="We envision a future where electric mobility is the first choice for all. A future where cities are cleaner, quieter, and more connected—powered by sustainable energy and bold innovation. At Electric, we aim to inspire a global movement toward greener lifestyles, one ride at a time."
+            description="At Green Power, a brand by Nata Enterprises, we envision a future where electric mobility is the first choice for all—a future where cities are cleaner, quieter, and more connected, powered by sustainable energy and bold innovation. Our goal is to inspire a global movement toward greener lifestyles, one ride at a time."
             bgColor="#FCFCFC"
           />
         </div>
@@ -113,13 +117,13 @@ const About = () => {
               />
               <Advantage
                 imageName={energy}
-                title="Recoverable energy"
-                descritpion="Charge your electric vehicle at home using one of our smart."
+                title="Lower Operating Costs"
+                descritpion="No need for fuel—charging an e-scooter is significantly cheaper than filling a gas tank."
               />
               <Advantage
                 imageName={energy}
-                title="Recoverable energy"
-                descritpion="Charge your electric vehicle at home using one of our smart."
+                title="Avoid Traffic Jams"
+                descritpion="E-scooters can often use bike lanes or alternate paths, helping you bypass heavy traffic."
               />
             </div>
             <div className="flex items-center justify-center">
@@ -128,18 +132,18 @@ const About = () => {
             <div className=" flex flex-col gap-[56px] ">
               <Advantage
                 imageName={energy}
-                title="Recoverable energy"
-                descritpion="Charge your electric vehicle at home using one of our smart."
+                title="Smart Connectivity"
+                descritpion="Many modern e-scooters come with GPS tracking, mobile apps, ride stats, and anti-theft features."
               />
               <Advantage
                 imageName={energy}
-                title="Recoverable energy"
-                descritpion="Charge your electric vehicle at home using one of our smart."
+                title="Noise-Free Travel"
+                descritpion="E-scooters are nearly silent, reducing noise pollution in busy neighborhoods."
               />
               <Advantage
                 imageName={energy}
-                title="Recoverable energy"
-                descritpion="Charge your electric vehicle at home using one of our smart."
+                title="Custom Ride Modes"
+                descritpion="Switch between eco, normal, and sport modes based on your speed and battery preferences."
               />
             </div>
           </div>
@@ -160,6 +164,7 @@ const About = () => {
               <img src={banner} alt="" className="absolute left-0 top-0" />
             </div>
             <Button
+              onClick={handleClick}
               title="Enquiry Now"
               bgColor="#000"
               hoverBgColor="#FCFCFC"

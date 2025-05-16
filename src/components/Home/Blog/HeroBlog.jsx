@@ -1,4 +1,9 @@
-import blog from "@/assets/images/blog.jpeg";
+"use client"
+
+import blog from "@/assets/images/blog.jpeg"
+import blog1 from "@/assets/images/Blog_Images/blog1.png"
+import blog2 from "@/assets/images/Blog_Images/blog2.png"
+import { useNavigate } from "react-router-dom"
 
 const HeroBlog = () => {
   // Static blog data
@@ -13,23 +18,27 @@ const HeroBlog = () => {
       id: 2,
       date: "10 April 2025",
       title: "Advancements in Electric Vehicle Battery Technology",
-      image: blog,
+      image: blog1,
     },
     {
       id: 3,
       date: "12 April 2025",
       title: "The Future of Electric Vehicle Charging Infrastructure",
-      image: blog,
+      image: blog2,
     },
-  ];
+  ]
+
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate("/blog")
+  }
 
   return (
     <div className="px-4 2xl:px-30 lg:px-5 mt-20">
       {/* title */}
       <div className="flex-col items-center gap-4 flex-[0_0_auto] flex relative">
-        <h2 className="text-[#444] font-[600] font-Playfair tracking-[2.4px] text-2xl text-center ">
-          Blog
-        </h2>
+        <h2 className="text-[#444] font-[600] font-Playfair tracking-[2.4px] text-2xl text-center ">Blog</h2>
         <div>
           <h1 className="text-[#000] font-[700] font-Playfair text-5xl text-center tracking-[2.4px]">
             Our recent article for the electric
@@ -38,7 +47,10 @@ const HeroBlog = () => {
             vehicle systems
           </h1>
         </div>
-        <button className="text-[#FFF] bg-black font-Poppins font-[600] text-base p-3 hover:bg-[#00C853] hover:rounded-tl-2xl hover:rounded-br-2xl transition-all ease-in duration-300 cursor-pointer w-fit">
+        <button
+          onClick={handleClick}
+          className="text-[#FFF] bg-black font-Poppins font-[600] text-base p-3 hover:bg-[#00C853] hover:rounded-tl-2xl hover:rounded-br-2xl transition-all ease-in duration-300 cursor-pointer w-fit"
+        >
           View More Blog
         </button>
       </div>
@@ -48,7 +60,8 @@ const HeroBlog = () => {
         {blogData.map((blog) => (
           <div
             key={blog.id}
-            className="h-[350px] w-[401px] rounded-tl-4xl rounded-br-4xl overflow-hidden relative"
+            className="h-[350px] w-[401px] rounded-tl-4xl rounded-br-4xl overflow-hidden relative cursor-pointer"
+            onClick={() => navigate(`/blog-details/${blog.id}`)}
           >
             {/* image */}
             <div
@@ -69,7 +82,7 @@ const HeroBlog = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroBlog;
+export default HeroBlog

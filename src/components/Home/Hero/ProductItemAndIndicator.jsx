@@ -19,7 +19,7 @@ const ProductItemAndIndicator = ({ products, activeIndex }) => {
             {products.map((product, index) => (
               <div
                 key={index}
-                className={`flex gap-2 items-center h-24 w-48 px-3 py-3 rounded-2xl transition-all duration-500 ${index === activeIndex
+                className={`flex gap-1 items-center h-24 w-48 px-3 py-3 rounded-2xl transition-all duration-500 ${index === activeIndex
                   ? "bg-white shadow-lg"
                   : index > activeIndex
                     ? "blur-[2px] bg-gradient-to-t from-[#00C853] to-[#3CDA7E]"
@@ -28,7 +28,7 @@ const ProductItemAndIndicator = ({ products, activeIndex }) => {
               >
                 {index === activeIndex && (
                   <>
-                    <div className="size-[63px] aspect-square">
+                    <div>
                       <img
                         src={products[index].imageName}
                         className="h-full w-full object-cover object-center"
