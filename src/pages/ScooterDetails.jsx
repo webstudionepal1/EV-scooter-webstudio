@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar/Navbar";
 import logo from "@/assets/images/nata_logo.png";
 import aboutImage from "@/assets/images/scooter_banner.jpeg";
 import TopHeader from "../components/TopHeader";
-import scooter from "@/assets/images/scooter5.png";
 import ScooterInfoCard from "../components/ScooterDetails/ScooterInfoCard";
 import range from "@/assets/images/icons/range.png";
 import topSpeed from "@/assets/images/icons/topSpeed.png";
@@ -13,16 +12,11 @@ import seat from "@/assets/images/seat.jpeg";
 import wheel from "@/assets/images/wheel.jpeg";
 import charge from "@/assets/images/charge.jpeg";
 import { useState } from "react";
-import carousel1 from "@/assets/images/scooter5.png";
-import carousel2 from "@/assets/images/scooter8.png";
-import carousel3 from "@/assets/images/scooter1.png";
-
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import parse from "html-react-parser";
-
 import ContactInf from "@/components/Contact/ContactInf";
 import batteryImage from "@/assets/images/icons/battery.png";
 import fastChargeImage from "@/assets/images/icons/fastCharge.png";
@@ -32,84 +26,153 @@ import comfortDesignImage from "@/assets/images/icons/comfortDesign.png";
 import tickScooterImage from "@/assets/images/icons/tickScooter.png";
 import { Button } from "@/components/UI/Button";
 import Footer from "@/components/Footer/Footer";
+import { useParams } from 'react-router-dom';
+import collection from "@/assets/images/scooter10.png";
+import collection1 from "@/assets/images/scooter5.png";
+import collection2 from "@/assets/images/scooter9.png"
 
-const accordionData = [
-  {
-    title: "Motor",
-    description:
-      "Type: Brushless DC motor<br/>Power: 40 kW (53 hp)<br/>Torque: 85 Nm",
-  },
-  {
-    title: "Battery",
-    description:
-      "Type: Lithium-ion<br />Capacity: 10 kWh<br />Voltage: 96V<br />Charging time: 3 hours (fast charging)",
-  },
-  {
-    title: "Performance",
-    description:
-      "Top speed: 160 km/h (99 mph)<br />Acceleration (0-100 km/h): 4.5 seconds<br />Range: Up to 200 km (124 miles) on a single charge (city riding)",
-  },
-  {
-    title: "Chassis",
-    description:
-      "Frame: Steel trellis frame<br />Suspension: Front telescopic fork, rear mono-shock<br />Brakes: Front and rear disc brakes with ABS",
-  },
-  {
-    title: "Dimensions",
-    description:
-      "Length: 2,000 mm<br />Width: 800 mm<br />Height: 1,100 mm<br />Seat height: 800 mm<br />Ground clearance: 150 mm<br />Weight: 180 kg (396 lbs)",
-  },
-];
-
-const variants = [
+// Static data array
+const scooterCollections = [
   {
     id: 1,
-    name: "Blue Sky",
-    image: carousel1,
+    title: "RAZOR",
+    image: collection,
+    range: "120 Km/Hr",
+    topSpeed: "60 Km/Hr",
+    motorPower: "2000 Watt",
+    accordionData: [
+      {
+        title: "Motor",
+        description: "Type: Brushless DC motor<br/>Power: 2000W ",
+      },
+      {
+        title: "Battery",
+        description: "Type: Lithium 72/40AH<br />Voltage: 110V-220V<br />Charging time: 4-6 hours (fast charging)",
+      },
+      {
+        title: "Performance",
+        description: "Top speed: 60-65 Km/Hr <br />Acceleration (0-60 km/h): 4.2 seconds<br />Ideal Range:90-100 Km/Hr <br/> Pick Up: 3000",
+      },
+      {
+        title: "Chassis",
+        description: "Frame: Aluminum alloy frame<br />Suspension: Adjustable front and rear<br />Brakes: F/R Disc",
+      },
+      {
+        title: "Dimensions",
+        description: "Tyre: 90/90/12 <br/>Length: 2,050 mm<br />Width: 820 mm<br />Height: 1,120 mm<br />Seat height: 810 mm<br />Ground clearance: 180 mm<br />Weight: 120 kg",
+      },
+    ],
+    variants: [
+      { id: 1, name: "Ruby Red", image: collection },
+      { id: 2, name: "Blue", image: collection1 },
+      { id: 3, name: "Red", image: collection2 },
+    ],
   },
   {
     id: 2,
-    name: "Red",
-    image: carousel2,
+    title: "F1-PRO",
+    image: collection1,
+    range: "100 Km/Hr",
+    topSpeed: "65 Km/Hr",
+    motorPower: "2000 Watt",
+    accordionData: [
+      {
+        title: "Motor",
+        description: "Type: Brushless DC motor<br/>Power: 2000W ",
+      },
+      {
+        title: "Battery",
+        description: "Type: Graphine 72/40AH<br />Voltage: 110V-220V<br />Charging time: 4-6 hours (fast charging)",
+      },
+      {
+        title: "Performance",
+        description: "Top speed: 60-65 Km/Hr <br />Acceleration (0-60 km/h): 4.2 seconds<br />Ideal Range:90-100 Km/Hr",
+      },
+      {
+        title: "Chassis",
+        description: "Frame: Aluminum alloy frame<br />Suspension: Adjustable front and rear<br />Brakes: F/R Disc",
+      },
+      {
+        title: "Dimensions",
+        description: "Tyre: 90/90/12 Vacuum Tyre<br/>Length: 2,050 mm<br />Width: 820 mm<br />Height: 1,120 mm<br />Seat height: 810 mm<br />Ground clearance: 180 mm<br />Weight: 120 kg",
+      },
+    ],
+    variants: [
+      { id: 1, name: "Blue", image: collection1 },
+      { id: 2, name: " Red", image: collection2 },
+      { id: 3, name: "Ruby Red", image: collection },
+    ],
   },
   {
     id: 3,
-    name: "Ruby Red",
-    image: carousel3,
-  },
-]
+    title: "F1-PRO",
+    image: collection2,
+    range: "120 Km/Hr",
+    topSpeed: "65 Km/Hr",
+    motorPower: "2000 Watt",
+    accordionData: [
+      {
+        title: "Motor",
+        description: "Type: Brushless DC motor<br/>Power: 2000W ",
+      },
+      {
+        title: "Battery",
+        description: "Type: Lead Asid 72/38AH<br />Voltage: 110V-220V<br />Charging time: 4-6 hours (fast charging)",
+      },
+      {
+        title: "Performance",
+        description: "Top speed: 60-65 Km/Hr <br />Acceleration (0-60 km/h): 4.2 seconds<br />Ideal Range:90-100 Km/Hr",
+      },
+      {
+        title: "Chassis",
+        description: "Frame: Aluminum alloy frame<br />Suspension: Adjustable front and rear<br />Brakes: F/R Disc",
+      },
+      {
+        title: "Dimensions",
+        description: "Tyre: 90/90/12 <br/>Length: 2,050 mm<br />Width: 820 mm<br />Height: 1,120 mm<br />Seat height: 810 mm<br />Ground clearance: 190 mm<br />Weight: 120 kg",
+      },
+    ],
+    variants: [
+      { id: 3, name: "Red", image: collection2 },
+      { id: 1, name: "Ruby Red", image: collection },
+      { id: 2, name: "Blue", image: collection1 },
 
+    ],
+  }
+];
 
 const ScooterDetails = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const { id } = useParams();
+  const scooter = scooterCollections.find((s) => s.id === parseInt(id)) || scooterCollections[0]; // Fallback to first scooter if ID not found
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrev = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? variants.length - 1 : prevIndex - 1))
-  }
+    setActiveIndex((prevIndex) => (prevIndex === 0 ? scooter.variants.length - 1 : prevIndex - 1));
+  };
 
   const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex === variants.length - 1 ? 0 : prevIndex + 1))
-  }
+    setActiveIndex((prevIndex) => (prevIndex === scooter.variants.length - 1 ? 0 : prevIndex + 1));
+  };
 
   const getVisibleVariants = () => {
-    const result = []
-    const length = variants.length
+    const result = [];
+    const length = scooter.variants.length;
 
     // Previous variant
-    const prevIndex = activeIndex === 0 ? length - 1 : activeIndex - 1
-    result.push({ ...variants[prevIndex], position: "left" })
+    const prevIndex = activeIndex === 0 ? length - 1 : activeIndex - 1;
+    result.push({ ...scooter.variants[prevIndex], position: "left" });
 
     // Active variant
-    result.push({ ...variants[activeIndex], position: "center" })
+    result.push({ ...scooter.variants[activeIndex], position: "center" });
 
     // Next variant
-    const nextIndex = activeIndex === length - 1 ? 0 : activeIndex + 1
-    result.push({ ...variants[nextIndex], position: "right" })
+    const nextIndex = activeIndex === length - 1 ? 0 : activeIndex + 1;
+    result.push({ ...scooter.variants[nextIndex], position: "right" });
 
-    return result
-  }
+    return result;
+  };
 
-  const visibleVariants = getVisibleVariants()
+  const visibleVariants = getVisibleVariants();
 
   return (
     <div>
@@ -120,40 +183,32 @@ const ScooterDetails = () => {
       />
       <TopHeader
         imgName={aboutImage}
-        title="Scooters Details"
-        description="Discover the perfect blend of style, performance, and efficiency with our latest scooter model."
-        breadcrumb="Scooters detail"
+        title={`${scooter.title} Details`}
+        description={`Discover the perfect blend of style, performance, and efficiency with our ${scooter.title} model.`}
+        breadcrumb={`${scooter.title} detail`}
       />
       {/* hero section */}
       <div className="relative top-[400px] w-full h-[770px] bg-[#F5F5F5]">
-        <div>
-          <img
-            src={scooter}
-            alt=""
-            className="absolute -bottom-15  left-1/2 -translate-x-1/2"
-          />
-        </div>
+
+        <img
+          src={scooter.image}
+          alt={scooter.title}
+          className="absolute -bottom-15  left-1/2 sm:w-[80%] sm:h-[80%]  self-stretch  -translate-x-1/2"
+        />
+
         <div className="h-full w-full lg:px-5 xl:px-30 absolute">
           <h1 className="font-Playfair font-[700] text-[40px] text-center text-[#000] mt-10">
-            Detailed Features Autoev R100
+            Detailed Features {scooter.title}
           </h1>
           <div className="flex flex-col gap-4 mt-35">
-            <ScooterInfoCard icons={range} title="Range" details="100 KM" />
-            <ScooterInfoCard
-              icons={topSpeed}
-              title="Top Speed"
-              details="70 Km/h"
-            />
-            <ScooterInfoCard
-              icons={motorPower}
-              title="Motor Power"
-              details="3000 Watt"
-            />
+            <ScooterInfoCard icons={range} title="Range" details={scooter.range} />
+            <ScooterInfoCard icons={topSpeed} title="Top Speed" details={scooter.topSpeed} />
+            <ScooterInfoCard icons={motorPower} title="Motor Power" details={scooter.motorPower} />
           </div>
         </div>
       </div>
       {/* Power and precision */}
-      <div className="relative top-[400px] w-full h-[770px] lg:px-5 xl:px-30">
+      <div className="relative top-[400px] w-full h-[1200px]  sm:h-[770px] lg:px-5 xl:px-30">
         <h1 className="font-Playfair text-[#000] text-[40px] font-[700] text-center mt-32">
           Power & Precision
         </h1>
@@ -162,8 +217,7 @@ const ScooterDetails = () => {
           <PowerAndPrecisionCard
             imageName={headLight}
             title="Modern Headlamp"
-            description="Minim aliqua non incididunt irure laboris exercitation laborum cillum non cupidatat."
-          />
+            description="Minim aliqua non incididunt Pilferage minim nulla voluptate laboris ut ex ea commodo consequat." />
           <PowerAndPrecisionCard
             imageName={seat}
             title="Spacious Seat"
@@ -189,7 +243,7 @@ const ScooterDetails = () => {
         </h1>
 
         {/* Carousels */}
-        <div className="relative flex items-center justify-center h-[500px] md:h-[900px] overflow-hidden">
+        <div className="relative flex items-center justify-center h-[500px] md:h-[800px] overflow-hidden">
           {/* Left arrow */}
           <button
             onClick={handlePrev}
@@ -204,7 +258,7 @@ const ScooterDetails = () => {
           {/* Images */}
           <div className="relative w-full flex justify-center items-center">
             {visibleVariants.map((variant) => {
-              const position = variant.position
+              const position = variant.position;
 
               return (
                 <div
@@ -226,7 +280,7 @@ const ScooterDetails = () => {
                   />
                   {position === "center" && <div className="font-Playfair text-center text-lg md:text-xl font-bold mt-4">{variant.name}</div>}
                 </div>
-              )
+              );
             })}
           </div>
 
@@ -250,7 +304,7 @@ const ScooterDetails = () => {
         </h1>
         {/* accordions */}
         <div className="max-w-[784px] m-auto">
-          {accordionData.map((item, index) => (
+          {scooter.accordionData.map((item, index) => (
             <Accordion key={index} className="my-3">
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}

@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import Navbar from "../components/Navbar/Navbar"
 import logo from "@/assets/images/logo_white.png"

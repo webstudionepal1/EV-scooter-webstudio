@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/condition" element={<Condtion />} />
         <Route path="/policy" element={<Policy />} />
         <Route path="/blog-details/:id" element={<BlogDetails />} />
-        <Route path="/scooter-details/:id" element={<ScooterDetails />} />
+        <Route path="/scooterDetails/:id" element={<ScooterDetails />} />
       </Routes>
     </BrowserRouter>
   );

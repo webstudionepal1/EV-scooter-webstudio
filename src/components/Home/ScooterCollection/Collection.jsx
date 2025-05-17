@@ -1,11 +1,9 @@
 import collection from "@/assets/images/vector/collection.png";
 import collection1 from "@/assets/images/vector/collection5.png";
-
-
 import { Icon } from "@iconify/react";
 import { useNavigate } from 'react-router-dom';
 
-// Static data array
+// Static data array with detailed attributes
 const scooterCollections = [
   {
     id: 1,
@@ -17,8 +15,6 @@ const scooterCollections = [
     title: "F1-PRO",
     image: collection1,
   },
-
-
 ];
 
 const Collection = () => {
@@ -27,8 +23,8 @@ const Collection = () => {
     navigate('/scooters');
   };
 
-  const handleClicked = () => {
-    navigate('/scooterDetails');
+  const handleClicked = (id) => {
+    navigate(`/scooterDetails/${id}`);
   };
 
   return (
@@ -56,7 +52,7 @@ const Collection = () => {
                   alt={scooter.title}
                   className="bg-[C4C4C4]"
                 />
-                <button onClick={handleClicked} className="  p-[4px] rounded-full bg-black absolute right-2 bottom-0 cursor-pointer hover:bg-[#00C853] ">
+                <button onClick={() => handleClicked(scooter.id)} className="  p-[4px] rounded-full bg-black absolute right-2 bottom-0 cursor-pointer hover:bg-[#00C853] ">
                   <Icon
                     icon="iconamoon:arrow-top-right-1-light"
                     color="white"

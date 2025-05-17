@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-const ScooterCard = ({ range, topSpeed, motorPower, title, imageName }) => {
-  const navigate = useNavigate();
+const ScooterCard = ({ range, topSpeed, motorPower, title, imageName, onClick }) => {
   const [hover, setHover] = useState(false);
   return (
     <div className="flex flex-col gap-8">
@@ -10,7 +8,7 @@ const ScooterCard = ({ range, topSpeed, motorPower, title, imageName }) => {
         style={{ backgroundColor: `${hover ? "#71CA00" : "#F5F5F7"}` }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        onClick={() => navigate("/scooterDetails")}
+        onClick={onClick}
       >
         <div className="h-[292px] w-full relative">
           {/* <img

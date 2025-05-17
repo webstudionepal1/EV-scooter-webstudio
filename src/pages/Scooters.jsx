@@ -7,7 +7,7 @@ import scooter1 from "@/assets/images/scooter1.png";
 import scooter2 from "@/assets/images/scooter2.png";
 import scooter3 from "@/assets/images/scooter8.png";
 import Footer from "@/components/Footer/Footer";
-
+import { useNavigate } from "react-router-dom";
 const Scooters = () => {
   // Static scooter data
   const scooterData = [
@@ -36,6 +36,10 @@ const Scooters = () => {
       motorPower: "2000 Watt",
     },
   ];
+  const navigate = useNavigate();
+  const handleClick = (id) => {
+    navigate(`/scooterDetails/${id}`);
+  };
 
   return (
     <div>
@@ -61,6 +65,7 @@ const Scooters = () => {
               range={scooter.range}
               topSpeed={scooter.topSpeed}
               motorPower={scooter.motorPower}
+              onClick={() => handleClick(scooter.id)}
             />
           ))}
         </div>
