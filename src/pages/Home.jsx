@@ -82,7 +82,7 @@ const App = () => {
       <About />
 
       <div className="px-4 xl:px-30 lg:px-5">
-        <div className="relative  w-full 2xl:h-[800px] h-[450px] md:my-20 my-5 rounded-tl-[100px] rounded-br-[100px] overflow-hidden">
+        <div className="relative  w-full 2xl:h-[600px] h-[450px] md:my-20 my-5 rounded-tl-[100px] rounded-br-[100px] overflow-hidden">
           <img src={frame} alt="" className="w-full h-full object-cover" />
           <div className="absolute bottom-5 left-7">
             <div className="flex flex-row items-center gap-3">

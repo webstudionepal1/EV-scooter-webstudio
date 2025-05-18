@@ -15,6 +15,29 @@ import enquiry from "@/assets/images/enquiry.png";
 import Footer from "@/components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
+const cardData = [
+  {
+    id: "1",
+    title: "Who We Are",
+    description: "At Green Power, a brand by Nata Enterprises, we are riders, innovators, and dreamers shaping the future of mobility. We design stylish, high-performance electric scooters that make city travel cleaner, smarter, and more exciting.",
+    bgColor: ""
+  },
+  {
+    id: "2",
+    title: "Our Mission",
+    description: "At Green Power, a brand by Nata Enterprises, our mission is to redefine urban mobility by creating high-performance electric scooters that are not only stylish and smart but also environmentally responsible. We are committed to delivering innovative technology, superior design, and a smooth riding experience—making clean transportation accessible to everyone.",
+    bgColor: "#EEFFF4"
+  },
+  {
+    id: "3",
+    title: "Our Vision",
+    description: "At Green Power, a brand by Nata Enterprises, we envision a future where electric mobility is the first choice for all—a future where cities are cleaner, quieter, and more connected, powered by sustainable energy and bold innovation. Our goal is to inspire a global movement toward greener lifestyles, one ride at a time.",
+    bgColor: "#FCFCFC"
+  },
+]
+
+
+
 const About = () => {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -37,7 +60,7 @@ const About = () => {
       <div className="w-full relative top-[500px] lg:px-5 xl:px-30 px-[16px]">
         {/* about us */}
         <div>
-          <div className="flex flex-col xl:flex-row justify-between items-center gap-10 ">
+          <div className="flex flex-col xl:flex-row justify-between items-center gap-10 xl:gap-40 2xl:gap-10">
             {/* Left side image with overlay */}
             <div
               className="md:w-[468px] w-[280px] md:h-[495px] h-[300px] relative -left-10 md:left-0 rounded-3xl bg-cover bg-center bg-no-repeat"
@@ -79,21 +102,11 @@ const About = () => {
         </div>
 
         {/* card */}
-        <div className="flex flex-col lg:flex-row gap-[20px] justify-between my-25">
-          <Card
-            title="Who We Are"
-            description="At Green Power, a brand by Nata Enterprises, we are riders, innovators, and dreamers shaping the future of mobility. We design stylish, high-performance electric scooters that make city travel cleaner, smarter, and more exciting."
-          />
-          <Card
-            title="Our Mission"
-            description="At Green Power, a brand by Nata Enterprises, our mission is to redefine urban mobility by creating high-performance electric scooters that are not only stylish and smart but also environmentally responsible. We are committed to delivering innovative technology, superior design, and a smooth riding experience—making clean transportation accessible to everyone."
-            bgColor="#EEFFF4"
-          />
-          <Card
-            title="Our Vision"
-            description="At Green Power, a brand by Nata Enterprises, we envision a future where electric mobility is the first choice for all—a future where cities are cleaner, quieter, and more connected, powered by sustainable energy and bold innovation. Our goal is to inspire a global movement toward greener lifestyles, one ride at a time."
-            bgColor="#FCFCFC"
-          />
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center gap-[20px] my-25">
+          {cardData.map((card) => (
+            <Card key={card.id} title={card.title} description={card.description} bgColor={card.bgColor} />
+          ))}
+
         </div>
 
         {/* advantages */}

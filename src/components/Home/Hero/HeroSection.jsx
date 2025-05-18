@@ -82,7 +82,7 @@ const HeroSection = () => {
             </h1>
           </div>
           {/* Product Details */}
-          <div className="absolute left-0 2xl:bottom-9 -bottom-30 md:-bottom-20 lg:-bottom-4 xl:bottom-3 2xl:w-60 xl:w-50 lg:w-40 w-full">
+          <div className="absolute left-0 2xl:bottom-9 -bottom-30 md:-bottom-20 lg:-bottom-4 xl:bottom-3 2xl:w-55 xl:w-46 lg:w-38 w-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={products[activeIndex].name}
@@ -93,13 +93,13 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, ease: "easeInOut" }}
                 className="space-y-2 sm:space-y-3 lg:space-y-4"
               >
-                <h1 className="font-Poppins 2xl:text-6xl lg:text-4xl sm:text-[30px] font-[500] lg:font-[700]">
+                <h1 className="font-Poppins 2xl:text-4xl lg:text-3xl sm:text-[30px] font-[500] lg:font-[700]">
                   {products[activeIndex].model}
                 </h1>
-                <p className="self-stretch text-[#8C8C8C] font-Poppins lg:text-lg text-md 2xl:text-2xl lg:my-2 2xl:my-5">
+                <p className="self-stretch text-[#8C8C8C] font-Poppins lg:text-lg text-md 2xl:text-2xl lg:my-2 2xl:my-3">
                   {products[activeIndex].name}
                 </p>
-                <p className="self-stretch text-[#444] font-Poppins text-[16px] lg:text-sm xl:text-base 2xl:text-xl text-justify font-[400]">
+                <p className=" text-[#444] font-Poppins text-[16px] lg:text-sm xl:text-base 2xl:text-xl 2xl: text-justify font-[400]">
                   {products[activeIndex].description}
                 </p>
               </motion.div>

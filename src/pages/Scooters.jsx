@@ -56,7 +56,7 @@ const Scooters = () => {
       />
       {/* scooters */}
       <div className="px-5 xl:px-30 relative top-[500px] ">
-        <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center gap-y-6">
+        <div className="grid 2xl:grid-cols-4  xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center  2xl:gap-x-30 gap-y-6">
           {scooterData.map((scooter) => (
             <ScooterCard
               key={scooter.id}
