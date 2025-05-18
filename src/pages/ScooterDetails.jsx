@@ -105,7 +105,7 @@ const scooterCollections = [
   },
   {
     id: 3,
-    title: "F1-PRO",
+    title: "S1-PRO",
     image: collection2,
     range: "120 Km/Hr",
     topSpeed: "65 Km/Hr",

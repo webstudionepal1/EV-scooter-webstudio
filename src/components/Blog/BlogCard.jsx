@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 // import { Icon } from "@iconify/react";
 import ExpandableButton from "../UI/ExpandableButton";
-const BlogCard = ({ imgName, day, month, title }) => {
+const BlogCard = ({ imgName, day, month, title, onClick }) => {
   const [hover, setHover] = useState(false);
+
   return (
     <div>
       <div
@@ -54,7 +55,7 @@ const BlogCard = ({ imgName, day, month, title }) => {
           </h3>
         </div>
       </div>
-      <ExpandableButton />
+      <ExpandableButton onClick={onClick} />
     </div>
   );
 };

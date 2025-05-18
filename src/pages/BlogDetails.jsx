@@ -14,7 +14,7 @@ import careArtBoard from "@/assets/images/icons/careArtboard.png"
 import { useNavigate, useParams } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
 // import avatar from "@/assets/images/avatar.jpeg";
-import blog from "@/assets/images/blog.jpeg"
+import blog from "@/assets/images/blog5.jpeg"
 import blog1 from "@/assets/images/Blog_Images/blog1.png"
 import blog2 from "@/assets/images/Blog_Images/blog2.png"
 
@@ -126,10 +126,10 @@ const BlogDetails = () => {
             </p>
 
             {/* Prev and Next Button */}
-            <div className="mt-6 flex items-center justify-center w-full">
-              <div className="flex gap-[55px] ">
-                {/* prev button */}
-                <div
+            {/* <div className="mt-6 flex items-center justify-center w-full">
+              <div className="flex gap-[55px] "> */}
+            {/* prev button */}
+            {/* <div
                   className="p-[10px] flex gap-[10px] items-center cursor-pointer"
                   onClick={() => {
                     const prevId = blogId > 1 ? blogId - 1 : blogData.length
@@ -149,10 +149,10 @@ const BlogDetails = () => {
                     />
                   </div>
                   <p className="font-Poppins text-[16px] font-[500] text-[#000]">Prev Post</p>
-                </div>
+                </div> */}
 
-                {/* Next button */}
-                <div
+            {/* Next button */}
+            {/* <div
                   className="p-[10px] flex gap-[10px] items-center cursor-pointer"
                   onClick={() => {
                     const nextId = blogId < blogData.length ? blogId + 1 : 1
@@ -174,7 +174,7 @@ const BlogDetails = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* comment section */}
             {/* <div className="w-3/4 mt-12">
@@ -288,11 +288,8 @@ const BlogDetails = () => {
             <div className="p-3 flex flex-col gap-2 w-full rounded-tr-[20px] rounded-bl-[20px] bg-[#F5F5F5] mt-3">
               <h2 className="text-[#000] font-Playfair text-[20px] font-[700] ">Recent Post</h2>
               {/* Post items */}
-              <RecentPost />
-              <RecentPost />
-              <RecentPost />
-              <RecentPost />
-              <RecentPost />
+              <RecentPost src={blog1} title="Energy Star Certified Electric Vehicle Chargers" />
+              <RecentPost src={blog2} title="Advancements in Electric Vehicle Battery Technology" />
             </div>
 
             {/* Tags */}
@@ -300,11 +297,11 @@ const BlogDetails = () => {
               <h2 className="font-Playfair text-[#000] text-[20px] font-[700] ">Tags</h2>
               <div className="flex flex-wrap gap-[15px]">
                 <TagButton detail="Brands" />
-                <TagButton detail="Car" />
+                <TagButton detail="Scooter" />
                 <TagButton detail="Energy" />
                 <TagButton detail="Services" />
                 <TagButton detail="EV" />
-                <TagButton detail="Fuel" />
+                <TagButton detail="Fuelless" />
               </div>
             </div>
 

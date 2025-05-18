@@ -3,7 +3,7 @@ import logo from "@/assets/images/logo_white.png"
 import aboutImage from "@/assets/images/about_banner.jpeg"
 import TopHeader from "../components/TopHeader"
 import BlogCard from "@/components/Blog/BlogCard"
-import blog from "@/assets/images/blog.jpeg"
+import blog from "@/assets/images/blog4.jpeg"
 import blog1 from "@/assets/images/Blog_Images/blog1.png"
 import blog2 from "@/assets/images/Blog_Images/blog2.png"
 import { useNavigate } from "react-router-dom"
@@ -65,10 +65,9 @@ const Blog = () => {
           {blogData.map((item, index) => (
             <div
               key={index}
-              onClick={() => handleBlogClick(item.id)}
               className="cursor-pointer hover:opacity-90 transition-opacity duration-300"
             >
-              <BlogCard imgName={item.img} day={item.day} month={item.month} title={item.title} />
+              <BlogCard imgName={item.img} day={item.day} month={item.month} title={item.title} onClick={() => handleBlogClick(item.id)} />
             </div>
           ))}
         </div>

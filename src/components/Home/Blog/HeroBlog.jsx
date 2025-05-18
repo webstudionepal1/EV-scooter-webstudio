@@ -1,6 +1,6 @@
 "use client"
 
-import blog from "@/assets/images/blog.jpeg"
+import blog from "@/assets/images/blog4.jpeg"
 import blog1 from "@/assets/images/Blog_Images/blog1.png"
 import blog2 from "@/assets/images/Blog_Images/blog2.png"
 import { useNavigate } from "react-router-dom"
