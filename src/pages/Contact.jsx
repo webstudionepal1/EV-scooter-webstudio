@@ -18,7 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 const contactInfoData = [
   {
     title: "Our Location",
-    description: "Lazimpat, Kathmandu 02, Nepal",
+    description: "Rabibhwan, Kathmandu ",
     imageName: contact1,
   },
   {
@@ -27,8 +27,8 @@ const contactInfoData = [
     imageName: contact2,
   },
   {
-    title: "Phone Number",
-    description: "9808474289, 9841910800, 9851133949",
+    title: "Number",
+    description: " 014536420 WhatsApp: 9808474289, 9841910800",
     imageName: contact3,
   },
 ];
