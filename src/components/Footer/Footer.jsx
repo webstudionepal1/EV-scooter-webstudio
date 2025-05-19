@@ -33,7 +33,7 @@ const Footer = () => {
             2025 Electric Scooter
           </p>
           <div className="flex gap-5 text-[#000] text-lg font-Poppins">
-            <a href="https://www.facebook.com/" className="cursor-pointer">
+            <a href="https://www.facebook.com/share/18d1qKdEqA/" className="cursor-pointer">
               <Icon icon="mdi:facebook" width="30" height="30" />
             </a>
             <a href="https://www.youtube.com/" className="cursor-pointer">
