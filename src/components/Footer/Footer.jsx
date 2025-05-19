@@ -36,10 +36,10 @@ const Footer = () => {
             <a href="https://www.facebook.com/share/18d1qKdEqA/" className="cursor-pointer">
               <Icon icon="mdi:facebook" width="30" height="30" />
             </a>
-            <a href="https://www.youtube.com/" className="cursor-pointer">
+            <a href="https://youtube.com/@greenpowerevscooter?si=S9SlIJfw3RmmvwZ1" className="cursor-pointer">
               <Icon icon="mdi:youtube" width="30" height="30" />
             </a>
-            <a href="https://www.tiktok.com/" className="cursor-pointer">
+            <a href="https://www.tiktok.com/@green.power.ev.sc?_t=ZS-8wTpl79rpOZ&_r=1" className="cursor-pointer">
               <Icon icon="ix:tiktok-logo" width="30" height="30" />
             </a>
           </div>
