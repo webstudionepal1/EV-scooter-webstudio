@@ -27,14 +27,14 @@ const Scooters = () => {
       topSpeed: "65 KM/Hr",
       motorPower: "2000 Watt",
     },
-    {
-      id: 3,
-      title: "S1-PRO",
-      imageName: scooter3,
-      range: "100 KM/Hr",
-      topSpeed: "60 KM/Hr",
-      motorPower: "2000 Watt",
-    },
+    // {
+    //   id: 3,
+    //   title: "S1-PRO",
+    //   imageName: scooter3,
+    //   range: "100 KM/Hr",
+    //   topSpeed: "60 KM/Hr",
+    //   motorPower: "2000 Watt",
+    // },
   ];
   const navigate = useNavigate();
   const handleClick = (id) => {

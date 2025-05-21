@@ -103,42 +103,42 @@ const scooterCollections = [
       { id: 3, name: "Ruby Red", image: collection },
     ],
   },
-  {
-    id: 3,
-    title: "S1-PRO",
-    image: collection2,
-    range: "120 Km/Hr",
-    topSpeed: "65 Km/Hr",
-    motorPower: "2000 Watt",
-    accordionData: [
-      {
-        title: "Motor",
-        description: "Type: Brushless DC motor<br/>Power: 2000W ",
-      },
-      {
-        title: "Battery",
-        description: "Type: Lead Asid 72/38AH<br />Voltage: 110V-220V<br />Charging time: 4-6 hours (fast charging)",
-      },
-      {
-        title: "Performance",
-        description: "Top speed: 60-65 Km/Hr <br />Acceleration (0-60 km/h): 4.2 seconds<br />Ideal Range:90-100 Km/Hr",
-      },
-      {
-        title: "Chassis",
-        description: "Frame: Aluminum alloy frame<br />Suspension: Adjustable front and rear<br />Brakes: F/R Disc",
-      },
-      {
-        title: "Dimensions",
-        description: "Tyre: 90/90/12 <br/>Length: 2,050 mm<br />Width: 820 mm<br />Height: 1,120 mm<br />Seat height: 810 mm<br />Ground clearance: 190 mm<br />Weight: 120 kg",
-      },
-    ],
-    variants: [
-      { id: 3, name: "Red", image: collection2 },
-      { id: 1, name: "Ruby Red", image: collection },
-      { id: 2, name: "Blue", image: collection1 },
+  // {
+  //   id: 3,
+  //   title: "S1-PRO",
+  //   image: collection2,
+  //   range: "120 Km/Hr",
+  //   topSpeed: "65 Km/Hr",
+  //   motorPower: "2000 Watt",
+  //   accordionData: [
+  //     {
+  //       title: "Motor",
+  //       description: "Type: Brushless DC motor<br/>Power: 2000W ",
+  //     },
+  //     {
+  //       title: "Battery",
+  //       description: "Type: Lead Asid 72/38AH<br />Voltage: 110V-220V<br />Charging time: 4-6 hours (fast charging)",
+  //     },
+  //     {
+  //       title: "Performance",
+  //       description: "Top speed: 60-65 Km/Hr <br />Acceleration (0-60 km/h): 4.2 seconds<br />Ideal Range:90-100 Km/Hr",
+  //     },
+  //     {
+  //       title: "Chassis",
+  //       description: "Frame: Aluminum alloy frame<br />Suspension: Adjustable front and rear<br />Brakes: F/R Disc",
+  //     },
+  //     {
+  //       title: "Dimensions",
+  //       description: "Tyre: 90/90/12 <br/>Length: 2,050 mm<br />Width: 820 mm<br />Height: 1,120 mm<br />Seat height: 810 mm<br />Ground clearance: 190 mm<br />Weight: 120 kg",
+  //     },
+  //   ],
+  //   variants: [
+  //     { id: 3, name: "Red", image: collection2 },
+  //     { id: 1, name: "Ruby Red", image: collection },
+  //     { id: 2, name: "Blue", image: collection1 },
 
-    ],
-  }
+  //   ],
+  // }
 ];
 
 const ScooterDetails = () => {
