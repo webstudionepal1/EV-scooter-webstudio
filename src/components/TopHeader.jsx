@@ -1,18 +1,20 @@
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
+
 const TopHeader = ({ imgName, title, description, breadcrumb }) => {
   const navigate = useNavigate();
+
   return (
     <div
-      className="z-20 bg-cover bg-center h-[500px] absolute top-0 w-full"
+      className="z-20 h-[550px] absolute top-0 w-full bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `
           linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
           url(${imgName})`,
-        backgroundRepeat: "no-repeat",
+        height: "fill"
       }}
     >
-      <div className="xl:px-30 lg:px-5 px-[16px] absolute  text-[#E3E3E3] bottom-20 w-full">
+      <div className="xl:px-30 lg:px-5 px-[16px] absolute text-[#E3E3E3] bottom-20 w-full">
         <div className="md:w-1/2 w-full">
           <h3 className="font-Playfair md:text-[70px] text-[50px] font-[600] tracking-[1.68px]">
             {title}

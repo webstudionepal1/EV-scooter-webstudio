@@ -35,8 +35,8 @@ const HeroSection = () => {
     <div className="px-[16px] xl:px-30 lg:px-5 md:mt-20 relative">
       <div className="flex md:justify-between w-full md:mb-5">
         <div>
-          <h1 className="w-3/5 2xl:text-7xl lg:text-5xl md:text-4xl text-2xl font-bold mb-4 font-Playfair xl:tracking-wider">
-            Super Fast Electric Moped
+          <h1 className="w-[65%] 2xl:text-7xl lg:text-5xl md:text-4xl text-2xl font-bold mb-4 font-Playfair xl:tracking-wider">
+            Super Fast Electric Scooters
           </h1>
         </div>
         <Testimonials />

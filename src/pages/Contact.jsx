@@ -16,11 +16,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 const contactInfoData = [
-  {
-    title: "Our Location",
-    description: "Rabibhwan, Kathmandu ",
-    imageName: contact1,
-  },
+  // {
+  //   title: "Our Location",
+  //   description: "Rabibhwan, Kathmandu ",
+  //   imageName: contact1,
+  // },
   {
     title: "Email Address",
     description: "info@NataEnterprise.com.np Lamsal.Manju77@gmail.com",
@@ -28,7 +28,7 @@ const contactInfoData = [
   },
   {
     title: "Number",
-    description: " 014536420 WhatsApp: 9808474289, 9841910800",
+    description: "9841910800, 9700912839",
     imageName: contact3,
   },
 ];
@@ -73,6 +73,14 @@ const Contact = () => {
           <h3 className="text-[#000] text-[40px] font-[600] mt-3">Feel Free to Contact</h3>
         </div>
         <div className="flex flex-col md:flex-row gap-6 m-auto w-fit mt-[46px]">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.720765180153!2d85.28490947560879!3d27.695024026034698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190046f842b3%3A0xec340ab14283fee8!2sGreen%20Power%20(Nata%20Enterprises)!5e0!3m2!1sen!2snp!4v1748376932858!5m2!1sen!2snp"
+            className="w-full h-full border-0 rounded-lg shadow-lg"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
           {contactInfoData.map((item, index) => (
             <ContactInf key={index} {...item} />
           ))}

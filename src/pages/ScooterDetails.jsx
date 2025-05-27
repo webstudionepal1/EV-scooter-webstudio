@@ -30,6 +30,7 @@ import { useParams } from 'react-router-dom';
 import collection from "@/assets/images/scooter10.png";
 import collection1 from "@/assets/images/scooter5.png";
 import collection2 from "@/assets/images/scooter9.png"
+import Modal from "../components/UI/Modal";
 
 // Static data array
 const scooterCollections = [
@@ -145,6 +146,7 @@ const ScooterDetails = () => {
   const { id } = useParams();
   const scooter = scooterCollections.find((s) => s.id === parseInt(id)) || scooterCollections[0]; // Fallback to first scooter if ID not found
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handlePrev = () => {
     setActiveIndex((prevIndex) => (prevIndex === 0 ? scooter.variants.length - 1 : prevIndex - 1));
@@ -368,22 +370,24 @@ const ScooterDetails = () => {
         </div>
       </div>
       {/* Ready to Drive into the Future */}
-      <div className="w-full relative top-[200px]  px-4 lg:px-5 xl:px-30 py-[47px] bg-[#049140] mt-25">
+      <div className="w-full relative top-[200px] px-4 lg:px-5 xl:px-30 py-[47px] bg-[#049140] mt-25">
         <div className="flex justify-between items-center">
-          <h1 className="font-Playfair text-[#F5F5F5] text-[24px] font-[800] ">
+          <h1 className="font-Playfair text-[#F5F5F5] text-[24px] font-[800]">
             Ready to Drive into the Future
           </h1>
-
           <Button
             title="Book a Test Drive"
             bgColor="#000"
             textColor="#fff"
             hoverBgColor="#fff"
             hoverTextColor="#000"
+            onClick={() => setIsModalOpen(true)}
           />
         </div>
       </div>
 
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {/* Footer */}
       <div className="relative top-[200px]">
         <Footer />

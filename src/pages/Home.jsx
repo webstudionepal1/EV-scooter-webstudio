@@ -2,7 +2,7 @@ import logo from "@/assets/images/logo.png";
 import Navbar from "../components/Navbar/Navbar";
 import HeroSection from "../components/Home/Hero/HeroSection";
 import About from "../components/Home/About Us/About";
-import frame from "@/assets/images/frame.jpeg";
+import frame from "@/assets/images/Home/Bg.jpg";
 import { Icon } from "@iconify/react";
 // import Trending from "../components/Home/Trending/Trending";
 import Collection from "../components/Home/ScooterCollection/Collection";
@@ -80,20 +80,32 @@ const App = () => {
       <Navbar navMenuItemColor={"#000"} logo={logo} />
       <HeroSection />
       <About />
-
       <div className="px-4 xl:px-30 lg:px-5">
-        <div className="relative  w-full 2xl:h-[600px] h-[450px] md:my-20 my-5 rounded-tl-[100px] rounded-br-[100px] overflow-hidden">
-          <img src={frame} alt="" className="w-full h-full object-cover" />
-          <div className="absolute bottom-5 left-7">
+        <div className="relative w-full 2xl:h-[600px] h-[450px] md:my-20 my-5 rounded-tl-[100px] rounded-br-[100px] overflow-hidden">
+
+          {/* Clickable image */}
+          <a href="https://www.youtube.com/@greenpowerevscooter" target="_blank" rel="noopener noreferrer">
+            <img
+              src={frame}
+              alt="Background"
+              className="absolute top-0 left-0 w-full h-full object-fill cursor-pointer"
+            />
+          </a>
+
+          {/* Overlay content */}
+          <div className="absolute bottom-5 left-7 z-10">
             <div className="flex flex-row items-center gap-3">
-              <Icon icon="mdi:youtube" width="50" height="50" color="white" />
+              <Icon icon="mdi:youtube" width="50" height="50" color="red" />
               <p className="font-Poppins font-[500] xl:text-lg text-base text-white">
                 Watch Our Video
               </p>
             </div>
           </div>
+
         </div>
       </div>
+
+
 
       {/* <Trending /> */}
 

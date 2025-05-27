@@ -17,7 +17,7 @@ const Scooters = () => {
       imageName: scooter1,
       range: "120 KM/Hr",
       topSpeed: "60 KM/Hr",
-      motorPower: "2000 Watt",
+      motorPower: "3000 Watt",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Scooters = () => {
       imageName: scooter2,
       range: "100 KM/Hr",
       topSpeed: "65 KM/Hr",
-      motorPower: "2000 Watt",
+      motorPower: "3000 Watt",
     },
     // {
     //   id: 3,
