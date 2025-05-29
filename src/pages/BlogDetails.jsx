@@ -1,12 +1,13 @@
 import { useState } from "react"
 import Navbar from "../components/Navbar/Navbar"
-import logo from "@/assets/images/logo_white.png"
+import logo from "@/assets/images/logo.png"
 // import aboutImage from "@/assets/images/about_banner.jpeg"
 import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader"
 import { Icon } from "@iconify/react"
-import blog_detail1 from "@/assets/images/Blog_Images/blog_detail1.png"
-import blog_detail2 from "@/assets/images/Blog_Images/blog_detail2.png"
+import blog_detail1 from "@/assets/images/aboutus/blog1.jpeg"
+
+import blog_detail2 from "@/assets/images/aboutus/blog2.jpeg"
 // import search from "@/assets/images/icons/search.png";
 import RecentPost from "../components/BlogDetails/RecentPost"
 import TagButton from "../components/BlogDetails/TagButton"
@@ -15,9 +16,11 @@ import careArtBoard from "@/assets/images/icons/careArtboard.png"
 import { useNavigate, useParams } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
 // import avatar from "@/assets/images/avatar.jpeg";
-import blog from "@/assets/images/blog5.jpeg"
-import blog1 from "@/assets/images/Blog_Images/blog1.png"
-import blog2 from "@/assets/images/Blog_Images/blog2.png"
+import blog from "@/assets/images/eagle.jpg"
+import blog1 from "@/assets/images/aboutus/blog3.jpeg"
+import blog2 from "@/assets/images/eagle.jpg"
+
+// src/assets/images/eagle.jpg
 
 const BlogDetails = () => {
   const [hover, setHover] = useState(false)

@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar/Navbar";
-import logo from "@/assets/images/nata_logo.png";
+import logo from "@/assets/images/logo.png";
 // import aboutImage from "@/assets/images/scooter_banner.jpeg";
 import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader";

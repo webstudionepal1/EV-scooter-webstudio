@@ -1,8 +1,8 @@
 "use client"
 
-import blog from "@/assets/images/blog4.jpeg"
-import blog1 from "@/assets/images/Blog_Images/blog1.png"
-import blog2 from "@/assets/images/Blog_Images/blog2.png"
+import blog from "@/assets/images/aboutus/blog3.jpeg"
+import blog1 from "@/assets/images/aboutus/blog1.jpeg"
+import blog2 from "@/assets/images/aboutus/blog2.jpeg"
 import { useNavigate } from "react-router-dom"
 
 const HeroBlog = () => {

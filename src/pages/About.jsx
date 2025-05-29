@@ -8,10 +8,10 @@ import about1 from "@/assets/images/aboutus/front.jpeg";
 import Card from "@/components/About/Card";
 import Advantage from "../components/About/Advantage";
 import energy from "@/assets/images/icons/energy.png";
-import scooter from "@/assets/images/advantageScooter.png";
+import scooter from "@/assets/images/aboutus/aboutus3.png";
 import { Button } from "@/components/UI/Button";
 import banner from "@/assets/images/icons/about.png";
-import enquiry from "@/assets/images/enquiry.png";
+import enquiry from "@/assets/images/eagle.jpg";
 import Footer from "@/components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 
@@ -35,8 +35,6 @@ const cardData = [
     bgColor: "#FCFCFC"
   },
 ]
-
-
 
 const About = () => {
   const navigate = useNavigate();

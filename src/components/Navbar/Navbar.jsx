@@ -3,7 +3,7 @@ import { useState } from "react";
 import SearchAndContact from "./SearchAndContact";
 import { Icon } from "@iconify/react";
 import SearchBar from "./SearchBar";
-import { NavLink, } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,8 +22,7 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
           <nav className="hidden xl:block">
             <ul
               className="gap-6 text-sm 2xl:text-base font-Montserrat font-semibold flex-row flex"
-              style={{ color: `${navMenuItemColor}` }}
-            >
+              style={{ color: `${navMenuItemColor}` }}>
               {navItems.map(({ name, path }) => (
                 <NavLink
                   key={name}
@@ -32,18 +31,27 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
                     isActive
                       ? "cursor-pointer text-[#00C853]"
                       : "cursor-pointer hover:text-[#00C853]"
-                  }
-                >
+                  }>
                   {name}
                 </NavLink>
               ))}
             </ul>
           </nav>
-          <img
-            src={logo}
-            alt="Logo of Electric charge"
-            className="w-[137px] h-[94px] object-contain hidden xl:block"
-          />
+          <div className="flex flex-col items-center mt-6">
+            <img
+              src={logo}
+              alt="Logo of Electric charge"
+              className="w-[137px] h-[90px] object-contain hidden xl:block"
+            />
+            <span className="hidden xl:block text-green-600 font-bold text-xl text-center leading-tight -mt-4 tracking-wide">
+              Green Power
+              <br />
+              <span className="text-sm font-medium text-gray-700 italic">
+                by Nata Enterprises
+              </span>
+            </span>
+          </div>
+
           <div className="flex xl:hidden items-center gap-4">
             <Icon
               icon="material-symbols:menu-rounded"
@@ -67,11 +75,11 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
       {/* mobile nav */}
       {showMenu ? (
         <div
-          className={`fixed top-0 h-screen z-80 w-[18rem] bg-gray-300 rounded-r-3xl transition-all duration-500 ease-in-out transform ${showMenu
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-5 pointer-events-none"
-            }`}
-        >
+          className={`fixed top-0 h-screen z-80 w-[18rem] bg-gray-300 rounded-r-3xl transition-all duration-500 ease-in-out transform ${
+            showMenu
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-5 pointer-events-none"
+          }`}>
           <div className=" flex gap-10 items-center h-[94px]">
             <Icon
               icon="material-symbols:close-rounded"
@@ -80,11 +88,11 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
               className="xl:hidden"
               onClick={() => setShowMenu(false)}
             />
-            <img
+            {/* <img
               src={logo}
               alt="Logo of Electric charge"
               className="w-[94px] h-[94px] object-contain md:hidden absolute left-1/2 -translate-x-1/2"
-            />
+            /> */}
           </div>
 
           <ul className="flex flex-col gap-6 text-sm 2xl:text-base font-Montserrat font-semibold items-center justify-center px-3">
@@ -96,8 +104,7 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
                   isActive
                     ? "cursor-pointer text-[#00C853]"
                     : "cursor-pointer hover:text-[#00C853]"
-                }
-              >
+                }>
                 {name}
               </NavLink>
             ))}
