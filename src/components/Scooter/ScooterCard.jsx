@@ -4,7 +4,7 @@ const ScooterCard = ({ range, topSpeed, motorPower, title, imageName, onClick })
   return (
     <div className="flex flex-col gap-8">
       <div
-        className={`p-4 bg-[#F5F5F7] max-w-[370px] flex flex-col rounded-[10px] transition-bg ease-in duration-300`}
+        className={`p-4 bg-[#F5F5F7] max-w-[500px] flex flex-col rounded-[10px] transition-bg ease-in duration-300`}
         style={{ backgroundColor: `${hover ? "#71CA00" : "#F5F5F7"}` }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -25,7 +25,7 @@ const ScooterCard = ({ range, topSpeed, motorPower, title, imageName, onClick })
               } transition-transform ease-in-out duration-300`}
           />
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-3">
           <div className="w-[104px] bg-[#FFF] rounded-[5px] py-[8px] px-[5px] flex justify-center items-center flex-col mt-12">
             <h2 className="text-[#212529]  text-[16px] font-[700] leading-[28.96px] text-center font-Playfair">
               {range}

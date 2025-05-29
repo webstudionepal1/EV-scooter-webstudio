@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import ScooterDetails from "./pages/ScooterDetails";
 import BlogDetails from "./pages/BlogDetails";
 import Condtion from "./pages/Condtion";
+import Loaders from "./pages/Loaders"
 import Policy from "./pages/Policy";
 const App = () => {
   return (
@@ -16,6 +17,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/scooters" element={<Scooters />} />
+        <Route path="/loaders" element={<Loaders/>} />
+
         <Route path="/features" element={<Parts />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />

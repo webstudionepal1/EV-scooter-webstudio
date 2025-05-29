@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "@/assets/images/logo_white.png";
+import logo from "@/assets/images/logo.png";
 import Navbar from "../components/Navbar/Navbar";
-import aboutImage from "@/assets/images/about_banner.jpeg";
+// import aboutImage from "@/assets/images/about_banner.jpeg";
+import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader";
 // import PartsCard from "../components/Parts/PartsCard";
 // import battery from "@/assets/images/Parts_Images/battery.png";

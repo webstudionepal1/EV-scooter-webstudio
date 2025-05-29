@@ -1,5 +1,7 @@
 import collection from "@/assets/images/vector/collection.png";
 import collection1 from "@/assets/images/vector/collection5.png";
+import eagle from "@/assets/images/eagle.png";
+
 import { Icon } from "@iconify/react";
 import { useNavigate } from 'react-router-dom';
 
@@ -15,6 +17,11 @@ const scooterCollections = [
     title: "F1-PRO",
     image: collection1,
   },
+  { id: 3,
+    title: "EAGLE",
+    image: eagle,
+       
+  }
 ];
 
 const Collection = () => {

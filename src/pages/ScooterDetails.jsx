@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import logo from "@/assets/images/nata_logo.png";
-import aboutImage from "@/assets/images/scooter_banner.jpeg";
+// import aboutImage from "@/assets/images/scooter_banner.jpeg";
+import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader";
 import ScooterInfoCard from "../components/ScooterDetails/ScooterInfoCard";
 import range from "@/assets/images/icons/range.png";
@@ -40,7 +41,7 @@ const scooterCollections = [
     image: collection,
     range: "120 Km/Hr",
     topSpeed: "60 Km/Hr",
-    motorPower: "2000 Watt",
+    motorPower: "3200 Watt",
     accordionData: [
       {
         title: "Motor",
@@ -52,7 +53,7 @@ const scooterCollections = [
       },
       {
         title: "Performance",
-        description: "Top speed: 60-65 Km/Hr <br />Acceleration (0-60 km/h): 4.2 seconds<br />Ideal Range:90-100 Km/Hr <br/> Pick Up: 3000",
+        description: "Top speed: 60-65 Km/Hr <br />Acceleration (0-60 km/h): 4.2 seconds<br />Ideal Range:90-100 Km/Hr <br/> Pick Up: 3200",
       },
       {
         title: "Chassis",
@@ -75,7 +76,7 @@ const scooterCollections = [
     image: collection1,
     range: "100 Km/Hr",
     topSpeed: "65 Km/Hr",
-    motorPower: "2000 Watt",
+    motorPower: "3200 Watt",
     accordionData: [
       {
         title: "Motor",

@@ -1,7 +1,8 @@
 import { useState } from "react"
 import Navbar from "../components/Navbar/Navbar"
 import logo from "@/assets/images/logo_white.png"
-import aboutImage from "@/assets/images/about_banner.jpeg"
+// import aboutImage from "@/assets/images/about_banner.jpeg"
+import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader"
 import { Icon } from "@iconify/react"
 import blog_detail1 from "@/assets/images/Blog_Images/blog_detail1.png"

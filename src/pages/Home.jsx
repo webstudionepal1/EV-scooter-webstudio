@@ -19,6 +19,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CollectionLoader from "../components/Home/LoaderCollection/CollectionLoader";
 
 const App = () => {
   const parts = [
@@ -82,9 +83,11 @@ const App = () => {
       <About />
       <div className="px-4 xl:px-30 lg:px-5">
         <div className="relative w-full 2xl:h-[600px] h-[450px] md:my-20 my-5 rounded-tl-[100px] rounded-br-[100px] overflow-hidden">
-
           {/* Clickable image */}
-          <a href="https://www.youtube.com/@greenpowerevscooter" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.youtube.com/@greenpowerevscooter"
+            target="_blank"
+            rel="noopener noreferrer">
             <img
               src={frame}
               alt="Background"
@@ -94,24 +97,25 @@ const App = () => {
 
           {/* Overlay content */}
           <div className="absolute bottom-5 left-7 z-10">
-            <div className="flex flex-row items-center gap-3">
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Replace with your YouTube link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row items-center gap-3">
               <Icon icon="mdi:youtube" width="50" height="50" color="red" />
               <p className="font-Poppins font-[500] xl:text-lg text-base text-white">
                 Watch Our Video
               </p>
-            </div>
+            </a>
           </div>
-
         </div>
       </div>
-
-
 
       {/* <Trending /> */}
 
       {/*scooter collection*/}
       <Collection />
-
+<CollectionLoader />
       {/* Parts */}
       <div className="xl:px-30 lg:px-5 px-4 my-20">
         <header className="mb-12 flex flex-col items-center justify-center gap-3">
@@ -144,7 +148,6 @@ const App = () => {
           </div> */}
         </div>
 
-
         {/* <CustomerTestimonial /> */}
         <HeroBlog />
 
@@ -158,8 +161,7 @@ const App = () => {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="h-15 flex items-center p-5 gap-3 bg-white rounded-full overflow-hidden"
-          >
+            className="h-15 flex items-center p-5 gap-3 bg-white rounded-full overflow-hidden">
             <input
               type="email"
               name="user_email"
@@ -169,8 +171,7 @@ const App = () => {
             />
             <button
               type="submit"
-              className="bg-black text-white p-3 rounded-full h-12 w-12 flex items-center justify-center hover:bg-[#00C853] transition-all ease-in duration-300 cursor-pointer"
-            >
+              className="bg-black text-white p-3 rounded-full h-12 w-12 flex items-center justify-center hover:bg-[#00C853] transition-all ease-in duration-300 cursor-pointer">
               <Icon
                 icon="iconamoon:arrow-right-1-light"
                 color="white"

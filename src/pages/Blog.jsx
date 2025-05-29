@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar/Navbar"
-import logo from "@/assets/images/logo_white.png"
-import aboutImage from "@/assets/images/about_banner.jpeg"
+import logo from "@/assets/images/logo.png"
+// import aboutImage from "@/assets/images/about_banner.jpeg"
+import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader"
 import BlogCard from "@/components/Blog/BlogCard"
 import blog from "@/assets/images/blog4.jpeg"

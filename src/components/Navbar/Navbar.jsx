@@ -10,7 +10,8 @@ const Navbar = ({ navMenuItemColor, logo, hamburgerMenuColor }) => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Scooters & Loaders", path: "/scooters" },
+    { name: "Scooters", path: "/scooters" },
+    { name: "Loaders", path: "/loaders" },
     { name: "Parts", path: "/features" },
     { name: "Blog", path: "/blog" },
   ];

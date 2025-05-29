@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 import TopHeader from "../components/TopHeader";
-import logo from "@/assets/images/logo_white.png";
-import aboutImage from "@/assets/images/aboutus/back.jpg";
+import logo from "@/assets/images/logo.png";
+import aboutImage from "@/assets/images/back.jpeg";
 import about from "@/assets/images/aboutus/WhatsApp Image 2025-05-27 at 14.04.25.jpeg";
 import about1 from "@/assets/images/aboutus/front.jpeg";
 import Card from "@/components/About/Card";
@@ -157,6 +157,57 @@ const About = () => {
                 imageName={energy}
                 title="Custom Ride Modes"
                 descritpion="Switch between eco, normal, and sport modes based on your speed and battery preferences."
+              />
+            </div>
+          </div>
+        </div>
+
+  {/* facilities */}
+        <div className="flex flex-col gap-12">
+          <div className="md:w-1/2 m-auto text-center">
+           
+            <h2 className="text-[#000] font-Playfair text-[40px] font-[700] tracking-[2.4px] leading-normal mt-3">
+              Our Finance Facilities{" "}
+            </h2>
+          </div>
+
+          {/* 3 cols image in the center */}
+          <div className="flex flex-col xl:flex-row items-center gap-12 w-full justify-start">
+            <div className=" flex flex-col gap-[56px] ">
+              <Advantage
+                imageName={energy}
+                title="Easy Finance Options Available "
+                descritpion="Hassle-free application and quick approval."
+              />
+              <Advantage
+                imageName={energy}
+                title="0% Interest Rate"
+                descritpion="Pay only the principal amount, no extra cost."
+              />
+              <Advantage
+                imageName={energy}
+                title="Low Down Payment"
+                descritpion="Start riding with minimal upfront cost."
+              />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src={scooter} alt="" />
+            </div>
+            <div className=" flex flex-col gap-[56px] ">
+              <Advantage
+                imageName={energy}
+                title="Flexible EMI Plans "
+                descritpion="Choose a repayment term that fits your budget."
+              />
+              <Advantage
+                imageName={energy}
+                title="No Hidden Charges"
+                descritpion="Transparent terms with no surprise fees."
+              />
+              <Advantage
+                imageName={energy}
+                title="Instant Loan Approval"
+                descritpion="Quick processing for faster delivery."
               />
             </div>
           </div>

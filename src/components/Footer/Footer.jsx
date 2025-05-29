@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import logo from "@/assets/images/footer_logo.png";
+import logo from "@/assets/images/logo.png";
 import { Icon } from "@iconify/react";
 const Footer = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Upper section of footer */}
         <div className="flex flex-col md:flex-row md:justify-between items-center">
           <div className="w-[160px] h-[110px] md:w-[160px] md:h-[110px]">
-            <img src={logo} alt="logo" className="h-full w-full object-cover" />
+            <img src={logo} alt="logo" className="h-[80%] w-[80%] object-cover" />
           </div>
 
           <ul className="flex md:gap-10 gap-[3px] text-[#444] md:text-lg text-sm font-Poppins md:justify-end md:flex-row flex-col items-center cursor-pointer w-full" >

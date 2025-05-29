@@ -1,5 +1,6 @@
 import React from 'react'
-import aboutImage from "@/assets/images/about_banner.jpeg";
+// import aboutImage from "@/assets/images/about_banner.jpeg";
+import aboutImage from "@/assets/images/back.jpeg";
 import logo from "@/assets/images/logo_white.png";
 import Navbar from "../components/Navbar/Navbar";
 import TopHeader from "../components/TopHeader";

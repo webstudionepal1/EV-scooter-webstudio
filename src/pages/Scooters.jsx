@@ -1,11 +1,13 @@
 import Navbar from "../components/Navbar/Navbar";
-import logo from "@/assets/images/logo_white.png";
-import aboutImage from "@/assets/images/about_banner.jpeg";
+import logo from "@/assets/images/logo.png";
+import aboutImage from "@/assets/images/back.jpeg";
+
 import TopHeader from "../components/TopHeader";
 import ScooterCard from "../components/Scooter/ScooterCard";
 import scooter1 from "@/assets/images/scooter1.png";
 import scooter2 from "@/assets/images/scooter2.png";
-import scooter3 from "@/assets/images/scooter8.png";
+import scooter3 from "@/assets/images/eaglescooter.png";
+
 import Footer from "@/components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 const Scooters = () => {
@@ -27,14 +29,14 @@ const Scooters = () => {
       topSpeed: "65 KM/Hr",
       motorPower: "3000 Watt",
     },
-    // {
-    //   id: 3,
-    //   title: "S1-PRO",
-    //   imageName: scooter3,
-    //   range: "100 KM/Hr",
-    //   topSpeed: "60 KM/Hr",
-    //   motorPower: "2000 Watt",
-    // },
+    {
+      id: 3,
+      title: "EAGLE",
+      imageName: scooter3,
+      range: "100 KM/Hr",
+      topSpeed: "60 KM/Hr",
+      motorPower: "3200 Watt",
+    },
   ];
   const navigate = useNavigate();
   const handleClick = (id) => {
