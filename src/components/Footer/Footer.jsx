@@ -72,23 +72,30 @@ const Footer = () => {
             </span>
             2025 Electric Scooter
           </p>
-          <div className="flex gap-5 text-[#000] text-lg font-Poppins">
-            <a
-              href="https://www.facebook.com/share/18d1qKdEqA/"
-              className="cursor-pointer">
-              <Icon icon="mdi:facebook" width="30" height="30" />
-            </a>
-            <a
-              href="https://youtube.com/@greenpowerevscooter?si=S9SlIJfw3RmmvwZ1"
-              className="cursor-pointer">
-              <Icon icon="mdi:youtube" width="30" height="30" />
-            </a>
-            <a
-              href="https://www.tiktok.com/@green.power.ev.sc?_t=ZS-8wTpl79rpOZ&_r=1"
-              className="cursor-pointer">
-              <Icon icon="ix:tiktok-logo" width="30" height="30" />
-            </a>
-          </div>
+         <div className="flex gap-5 text-[#000] text-lg font-Poppins">
+  <a
+    href="https://www.facebook.com/greenpowerevnepal/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="cursor-pointer">
+    <Icon icon="mdi:facebook" width="30" height="30" />
+  </a>
+  <a
+    href="https://youtube.com/@greenpowerevscooter?si=S9SlIJfw3RmmvwZ1"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="cursor-pointer">
+    <Icon icon="mdi:youtube" width="30" height="30" />
+  </a>
+  <a
+    href="https://www.tiktok.com/@green.power.ev.sc?_t=ZS-8wTpl79rpOZ&_r=1"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="cursor-pointer">
+    <Icon icon="ix:tiktok-logo" width="30" height="30" />
+  </a>
+</div>
+
           
 
 

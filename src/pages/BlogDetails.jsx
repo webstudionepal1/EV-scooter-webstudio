@@ -98,14 +98,14 @@ const BlogDetails = () => {
               <div className="flex text-[#8CC63F] gap-4">
                 <Icon icon="lets-icons:check-fill" width="24" height="24" />
                 <p className="text-[#101010] font-Poppins font-[500]">
-                  Detachable battery, take home and charge in 3 hours heir self-interest.
+                  Detachable battery, take home and charge in 4 hours heir self-interest.
                 </p>
               </div>
 
               <div className="flex text-[#8CC63F] gap-4">
                 <Icon icon="lets-icons:check-fill" width="24" height="24" />
                 <p className="text-[#101010] font-Poppins font-[500]">
-                  Enjoy a hassle-free ride by charging just for 3 hours.{" "}
+                  Enjoy a hassle-free ride by charging just for 4 hours.{" "}
                 </p>
               </div>
               <div className="flex text-[#8CC63F] gap-4">
