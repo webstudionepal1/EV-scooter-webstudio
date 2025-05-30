@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar/Navbar";
-import logo from "@/assets/images/logo_white.png";
+import logo from "@/assets/images/logo.png";
 // import aboutImage from "@/assets/images/about_banner.jpeg";
 import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader";
