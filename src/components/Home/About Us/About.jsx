@@ -43,7 +43,7 @@ const About = () => {
                 <img src={aboutFeatures} alt="" />
               </div>
               <h3 className="text-[#101010] font-Poppins font-[500]">
-                No Driving License
+                Reduced Noise Pollution
               </h3>
             </div>
             <p className=" pr-4 text-xs font-Poppins text-[#444] font-[400] ">

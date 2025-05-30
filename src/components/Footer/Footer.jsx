@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import logo from "@/assets/images/logo.png";
+import webstudiologo from "@/assets/images/webstudiologo.png";
 import { Icon } from "@iconify/react";
 const Footer = () => {
   const navigate = useNavigate();
@@ -88,7 +89,32 @@ const Footer = () => {
               <Icon icon="ix:tiktok-logo" width="30" height="30" />
             </a>
           </div>
+          
+
+
         </div>
+
+<div className="flex justify-end items-center mt-2">
+  <div className="flex flex-col items-center text-center">
+    <p className="text-sm text-gray-600 mt-2">Designed & Developed by</p>
+    <a 
+      href="https://webstudionepal.com/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img
+        src={webstudiologo}
+        alt="Web Studio Logo"
+        className="w-15 h-15 object-contain"
+      />
+    </a>
+  </div>
+</div>
+
+
+
+
+
       </div>
     </div>
   );
