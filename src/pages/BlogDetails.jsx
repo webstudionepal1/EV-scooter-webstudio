@@ -1,27 +1,21 @@
 import { useState } from "react"
 import Navbar from "../components/Navbar/Navbar"
 import logo from "@/assets/images/logo.png"
-// import aboutImage from "@/assets/images/about_banner.jpeg"
 import aboutImage from "@/assets/images/back.jpeg";
 import TopHeader from "../components/TopHeader"
 import { Icon } from "@iconify/react"
 import blog_detail1 from "@/assets/images/aboutus/blog1.jpeg"
-
 import blog_detail2 from "@/assets/images/aboutus/blog2.jpeg"
-// import search from "@/assets/images/icons/search.png";
 import RecentPost from "../components/BlogDetails/RecentPost"
 import TagButton from "../components/BlogDetails/TagButton"
 import support from "@/assets/images/support.jpeg"
 import careArtBoard from "@/assets/images/icons/careArtboard.png"
 import { useNavigate, useParams } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
-// import avatar from "@/assets/images/avatar.jpeg";
 import blog from "@/assets/images/add1.jpeg"
-// src/assets/images/add1.jpeg
 import blog1 from "@/assets/images/aboutus/blog3.jpeg"
 import blog2 from "@/assets/images/eagle.jpg"
 
-// src/assets/images/eagle.jpg
 
 const BlogDetails = () => {
   const [hover, setHover] = useState(false)
@@ -96,12 +90,12 @@ const BlogDetails = () => {
             </p>
             {/* Ticked Item */}
             <div className="flex flex-col gap-4 my-3">
-              <div className="flex text-[#8CC63F] gap-4">
+              {/* <div className="flex text-[#8CC63F] gap-4">
                 <Icon icon="lets-icons:check-fill" width="24" height="24" />
                 <p className="text-[#101010] font-Poppins font-[500]">
                   Detachable battery, take home and charge in 4 hours heir self-interest.
                 </p>
-              </div>
+              </div> */}
 
               <div className="flex text-[#8CC63F] gap-4">
                 <Icon icon="lets-icons:check-fill" width="24" height="24" />
@@ -119,10 +113,10 @@ const BlogDetails = () => {
             {/* Two Image */}
             <div className="flex flex-col md:flex-row w-full gap-6 my-3">
               <div className="md:w-1/2 w-full h-[367.568px] rounded-[20px] overflow-hidden">
-                <img src={blog_detail1 || "/placeholder.svg"} alt="" className="h-full w-full object-cover" />
+                <img src={blog_detail1} alt="" className="h-full w-full object-cover" />
               </div>
               <div className="md:w-1/2 w-full h-[367.568px] rounded-[20px] overflow-hidden">
-                <img src={blog_detail2 || "/placeholder.svg"} alt="" className="h-full w-full object-cover" />
+                <img src={blog_detail2} alt="" className="h-full w-full object-cover" />
               </div>
             </div>
 
@@ -130,152 +124,7 @@ const BlogDetails = () => {
               With these advancements, electric vehicles are becoming more practical, affordable, and sustainable than ever. At Green Power Brand and Nata Enterprises Company, we are committed to staying at the forefront of EV technology — offering smart, compatible, and future-proof charging solutions.
             </p>
 
-            {/* Prev and Next Button */}
-            {/* <div className="mt-6 flex items-center justify-center w-full">
-              <div className="flex gap-[55px] "> */}
-            {/* prev button */}
-            {/* <div
-                  className="p-[10px] flex gap-[10px] items-center cursor-pointer"
-                  onClick={() => {
-                    const prevId = blogId > 1 ? blogId - 1 : blogData.length
-                    navigate(`/blog-details/${prevId}`)
-                  }}
-                >
-                  <div
-                    className="bg-[#000] p-[2px] rounded-full hover:bg-[#00C853] transition-all ease-in duration-300 cursor-pointer"
-                    onMouseEnter={() => setPrevHover(true)}
-                    onMouseLeave={() => setPrevHover(false)}
-                  >
-                    <Icon
-                      icon="mingcute:left-line"
-                      width="24"
-                      height="24"
-                      style={{ color: `${prevHover ? "#000" : "#eaeaea"}` }}
-                    />
-                  </div>
-                  <p className="font-Poppins text-[16px] font-[500] text-[#000]">Prev Post</p>
-                </div> */}
-
-            {/* Next button */}
-            {/* <div
-                  className="p-[10px] flex gap-[10px] items-center cursor-pointer"
-                  onClick={() => {
-                    const nextId = blogId < blogData.length ? blogId + 1 : 1
-                    navigate(`/blog-details/${nextId}`)
-                  }}
-                >
-                  <p className="font-Poppins text-[16px] font-[500] text-[#000]">Next Post</p>
-                  <div
-                    className="bg-[#000] p-[2px] rounded-full hover:bg-[#00C853] transition-all ease-in duration-300 cursor-pointer"
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                  >
-                    <Icon
-                      icon="mingcute:right-line"
-                      width="24"
-                      height="24"
-                      style={{ color: `${hover ? "#000" : "#eaeaea"}` }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div> */}
-
-            {/* comment section */}
-            {/* <div className="w-3/4 mt-12">
-              <div>
-                <h2 className="font-Playfair text-[24px] font-[700] text-[#000] leading-normal">
-                  Comments
-                </h2>
-                <p className="font-Poppins text-[#000] text-[18px] font-[400] mt-[23px]">
-                  2 Replies to “Energy Star Certified Electric Vehicle Chargers”
-                </p>
-              </div>
-
-             
-              <div className="w-full flex p-[10px] mt-12 justify-between">
-                <div className="flex gap-[10px] items-center">
-                  <div className="h-[42px] w-[42px] ">
-                    <img
-                      src={avatar || "/placeholder.svg"}
-                      className="rounded-full h-full w-full object-cover object-center"
-                    />
-                  </div>
-                  
-                  <h2 className="font-Playfair text-[18px] font-[500] text-[#000]">
-                    Tom Goodman
-                  </h2>
-                </div>
-
-
-                <button className="flex items-center gap-[10px] px-3 py-2 bg-[#00C853] rounded-tl-[20px] rounded-br-[20px] text-[#fff] hover:bg-[#000] cursor-alias transition-all duration-300 ease-in">
-                  <Icon icon="mdi:reply" width="24" height="24" />
-                  <p className="font-Poppins text-[14px] font-[600]">Reply</p>
-                </button>
-              </div>
-          
-
-              <div className="py-6 px-[18px] font-Poppins bg-[#F5F5F5] rounded-tl-[20px] rounded-br-[20px] mt-[10px]">
-                <h1 className="text-[16px] text-[#000] font-[500]">Admin</h1>
-                <p className="text-[#444] font-[400] text-[12px]">50 min ago</p>
-                <p className="text-[#444] text-[14px] text-justify leading-[30px] font-[400] mt-3">
-                  Aliquam erat volutpat. Integer malesuada turpis id fringilla
-                  suscipit. Maecenas ultrices, orci vitae convallis mattis, quam
-                  nulla vehicula felis, eu cursus sem tellus eget elit.
-                </p>
-              </div>
-  
-              <div className="w-full flex justify-center">
-                <button className="font-Poppins text-[14px] font-[600] text-[#000] m-auto w-fit my-5 cursor-pointer hover:text-[#00C853] transition-all ease-in duration-300">
-                  See All Comments
-                </button>
-              </div>
-
-       
-              <div className="p-6 w-full flex flex-col gap-3 bg-[#F5F5F5] rounded-[8px]">
-                <div>
-                  <h1 className="font-Playfair text-[#000] text-[24px] font-[700]">
-                    Leave a Reply
-                  </h1>
-                  <p className="mt-3 font-Poppins text-[#444] text-[14px] tracking-[0.36px]">
-                    Your email address will not be published. Required fields
-                    are marked *
-                  </p>
-                </div>
-
-                <form className="w-full">
-                  <div className="flex gap-[25px]">
-         
-                    <div className="w-1/2">
-                      <input
-                        type="text"
-                        placeholder="Name"
-                        className="w-full p-3 font-Poppins text-[#000] text-[14px] font-[600] bg-[#F5F5F5] rounded-[8px] border-[#EAEAEA] border-[1px] "
-                      />
-                    </div>
-             
-                    <div className="w-1/2">
-                      <input
-                        type="email"
-                        placeholder="Email Address"
-                        className="w-full p-3 font-Poppins text-[#000] text-[14px] font-[600] bg-[#F5F5F5] rounded-[8px] border-[#EAEAEA] border-[1px] "
-                      />
-                    </div>
-                  </div>
-          
-                  <div className="w-full mt-4">
-                    <textarea
-                      placeholder="Email Address"
-                      className="w-full p-[10px] font-Poppins text-[#000] text-[14px] font-[600] bg-[#F5F5F5] rounded-[8px] border-[#EAEAEA] border-[1px] h-[133px] "
-                    />
-                  </div>
-                </form>
-              </div>
-        
-              <button className="px-[36px] py-[14px] bg-[#00C853] cursor-pointer font-Poppins text-[14px] font-[600] text-[#fff] mt-[20px]">
-                Post Comment
-              </button>
-            </div> */}
+      
           </div>
 
           {/* sidemenu item */}

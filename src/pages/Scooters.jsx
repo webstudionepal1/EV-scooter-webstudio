@@ -4,7 +4,7 @@ import aboutImage from "@/assets/images/back.jpeg";
 
 import TopHeader from "../components/TopHeader";
 import ScooterCard from "../components/Scooter/ScooterCard";
-import scooter1 from "@/assets/images/scooter1.png";
+import scooter1 from "@/assets/images/Razor.png";
 import scooter2 from "@/assets/images/scooter2.png";
 import scooter3 from "@/assets/images/eaglescooter.png";
 

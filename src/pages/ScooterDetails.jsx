@@ -28,7 +28,7 @@ import tickScooterImage from "@/assets/images/icons/tickScooter.png";
 import { Button } from "@/components/UI/Button";
 import Footer from "@/components/Footer/Footer";
 import { useParams } from 'react-router-dom';
-import collection from "@/assets/images/scooter10.png";
+import collection from "@/assets/images/Razor.png";
 import collection1 from "@/assets/images/scooter5.png";
 import collection2 from "@/assets/images/scooter9.png"
 import Modal from "../components/UI/Modal";

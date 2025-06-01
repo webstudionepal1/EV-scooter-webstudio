@@ -57,7 +57,7 @@ const About = () => {
           <div className="flex text-[#8CC63F] gap-4">
             <Icon icon="lets-icons:check-fill" width="24" height="24" />
             <p className="text-[#101010] font-Poppins font-[500]">
-              Detachable battery and  charge in 4 hours.
+              Charge in 4 hours.
             </p>
           </div>
 
