@@ -16,7 +16,8 @@ import careArtBoard from "@/assets/images/icons/careArtboard.png"
 import { useNavigate, useParams } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
 // import avatar from "@/assets/images/avatar.jpeg";
-import blog from "@/assets/images/eagle.jpg"
+import blog from "@/assets/images/add1.jpeg"
+// src/assets/images/add1.jpeg
 import blog1 from "@/assets/images/aboutus/blog3.jpeg"
 import blog2 from "@/assets/images/eagle.jpg"
 
