@@ -74,7 +74,7 @@ const Footer = () => {
           </p>
          <div className="flex gap-5 text-[#000] text-lg font-Poppins">
   <a
-    href="https://www.facebook.com/greenpowerevnepal/"
+    href="https://www.facebook.com/share/1CDhKRRBbM/"
     target="_blank"
     rel="noopener noreferrer"
     className="cursor-pointer">
